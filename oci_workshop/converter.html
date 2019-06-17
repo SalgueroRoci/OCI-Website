@@ -1,0 +1,56 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form id="frm1" action="/action_page.php">
+            JSON: <input type="text" name="fname" value="test"><br>
+        </form> 
+        <button onclick="myFunction()">Try it</button>
+            
+        <p></p>
+        <code id="demo"></code>
+        </form>
+
+        <script>
+            var content = ""; 
+            var pages = "";
+            var innerbody ="";
+            function myFunction() {
+                content = "";
+                var x = document.getElementById("frm1");
+                var i;
+                for (i = 0; i < x.length ;i++) {
+                    content += x.elements[i].value;
+                }
+                var obj = JSON.parse(content);
+
+                document.getElementById("demo").innerText += obj.name + '\n' + obj.description + '\n\n';
+
+                //pages for modal
+                pages ='<li data-target="#carouseltutorials" data-slide-to="0" class="active"></li>';
+                for(var i = 1; i < obj.steps.length; i++) {
+                    pages =pages + '\n<li data-target="#carouseltutorials" data-slide-to="'+i+'"></li>';
+                }
+
+                //content for modal
+                for(var i = 0; i < obj.steps.length; i++) {
+                    if(i == 0) {
+                        innerbody += '\n<div class="carousel-item active">\n';
+                    }
+                    else {
+                        innerbody += '<div class="carousel-item">\n';
+                    }
+                    innerbody += obj.steps[i].message + "\n</div>\n";
+                }
+
+                document.getElementById("demo").innerText += pages + "\n";
+                // document.getElementById("demo").appendChild(document.createTextNode(innerbody));
+                document.getElementById("demo").innerText += innerbody;
+            }
+
+        </script>
+
+        
+    </body>
+</html>

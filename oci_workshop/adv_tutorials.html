@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Advanced OCI Workshop</title>
+
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="extension.html">OCI Workshop Tutorials Home</a>
+  </nav>
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">OCI Advanced Workshop Tutorials</h1>
+            <p class="lead">Labs referenced from the OCI Google Extension which features tutorials on how to use Oracle Cloud Infrastructure. If you have Google Chrome download the extension <a href="https://chrome.google.com/webstore/detail/oci-workshop-extension/pjonegmmmclaihfglajojmfcpfambpcd">here</a>. <br/>Same tutorials found here, and works with most modern browsers. Images and tutorials up-to-date as of June 2019. </br>Homepage: <a href="https://tinyurl.com/ociWorkshops">https://tinyurl.com/ociWorkshops</a>
+            <br /><br />
+            These are more Advanced Topics and Use-Cases for Oracle Cloud Infrastructure. To go back to Fundemental Workshops <a href="extension.html">click here</a>.</p> 
+            <hr class="my-4">
+        </div>
+    </div>
+
+    <div class="container">
+    <!-- Example row of columns -->
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Jump Server and Load Balancer</h2>
+          <p>Description</p>
+          <p><button type="button" id="jump_server_lb0" class="btn btn-primary btn-block btn-block" data-toggle="modal" data-target="#tutorials">Create Compartment &raquo;</button></p>
+          <p><button type="button" id="jump_server_lb1" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials">Create VCN &raquo;</button></p>
+          <p><button type="button" id="jump_server_lb2" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials">Create Internet and NAT Gateway &raquo;</button></p>
+          <p><button type="button" id="jump_server_lb3" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials">Create Security List and Route Table &raquo;</button></p>
+          <p><button type="button" id="jump_server_lb4" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials">Create Subnets &raquo;</button></p>
+          <p><button type="button" id="jump_server_lb5" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials">Create Jump Server &raquo;</button></p>
+          <p><button type="button" id="jump_server_lb6" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials">Create Backend Server &raquo;</button></p>
+          <p><button type="button" id="jump_server_lb7" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials">Create Load Balancer &raquo;</button></p>
+        </div>
+        <div class="col-md-4">
+
+        </div>
+        <div class="col-md-4">
+
+        </div>
+      </div>
+
+      <hr>
+      <footer>
+        <p>&copy; 2022 SM Solution Engineers, Inc.</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+
+  <!-- The Modal -->
+  <div class="modal" id="tutorials">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Title</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+          
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div id="carouseltutorials" class="carousel slide" data-ride="carousel" data-interval="0">
+
+                <ol class="carousel-indicators">
+                    <li data-target="#carouseltutorials" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouseltutorials" data-slide-to="1"></li>
+                    <li data-target="#carouseltutorials" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <p>Default</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p>Default</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p>Default</p>
+                  </div>
+                </div>
+
+                <a class="carousel-control-prev" href="#carouseltutorials" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouseltutorials" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+          
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div> 
+
+    </div>
+  </div>
+</div>
+<!--End Modal-->
+
+<!-- IMG MODAL -->
+<div class="modal fade bd-example-modal-xl" id="imagess">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <button type="button" id="img-close" data-dismiss="modal">&times;</button>
+        <img id="img-main" class="img-responsive" src="" alt="name" /> 
+      </div>
+    </div>
+</div>
+<!-- END IMG MODAL -->
+
+<script src="js/adv_tutorials.js"></script>
+
+</body>
+
+</html>

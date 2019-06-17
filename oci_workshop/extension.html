@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>OCI Workshop</title>
+
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="extension.html">OCI Workshop Tutorials</a>
+  </nav>
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+    <div class="jumbotron">
+        <div class="container">
+            <h1 class="display-4">OCI Workshop Tutorials</h1>
+            <p class="lead">Labs referenced from the OCI Google Extension which features tutorials on how to use Oracle Cloud Infrastructure. If you have Google Chrome download the extension <a href="https://chrome.google.com/webstore/detail/oci-workshop-extension/pjonegmmmclaihfglajojmfcpfambpcd">here</a>. <br/>Same tutorials found here, and works with most modern browsers. Images and tutorials up-to-date as of June 2019. </br>Homepage: <a href="https://tinyurl.com/ociWorkshops">https://tinyurl.com/ociWorkshops</a>
+            <br /><br />
+            For more Advanced Topics and Use Cases <a href="adv_tutorials.html" >Go Here</a>.</p> 
+            <hr class="my-4">
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- Example row of columns -->
+      <div class="row">
+          <div class="col-md-4">
+            <h2>Identity Access Management</h2>
+            <p>Description</p>
+            <p><button type="button" id="create_compartments" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> Create a Compartment &raquo;</button></p>
+            <p><button type="button" id="users_and_groups" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> Create a Users, and Groups &raquo;</button></p>
+            <p><button type="button" id="user_credentials" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> User Credentials &raquo;</button></p>
+            <p><button type="button" id="grant_policies" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> Grant Policies to Groups &raquo;</button></p>
+            <p><button type="button" id="federation" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> Federation with OCI &raquo;</button></p>
+          </div>
+          <div class="col-md-4">
+            <h2>Governance</h2>
+            <p>Description</p>
+            <p><button type="button" id="manage_tags" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> Managing Tags &raquo;</button></p>
+          </div>
+          <div class="col-md-4">
+            <h2>Networking</h2>
+            <p>Description</p>
+            <p><button type="button" id="create_vcn" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> Creating a VCN &raquo;
+            </button></p>
+            <p><button type="button" id="create_security_lists" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> Creating Security Lists &raquo;</button></p>
+            <p><button type="button" id="create_route_table" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> Creating Route Table &raquo;</button></p>
+            <p><button type="button" id="create_subnet" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> Creating a Subnet &raquo;</button></p>
+            <p><button type="button" id="internet_gateway" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> Creating Internet Gateway &raquo;</button></p>
+            <p><button type="button" id="reserved_ip" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> Creating Reserved IP &raquo;</button></p>
+          </div>
+      </div>
+      <hr>
+
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Compute</h2>
+          <p>Description</p>
+          <p><button type="button" id="create_compute" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> Creating a Compute Instance &raquo;</button></p>
+          
+        </div>
+        <div class="col-md-4">
+          <h2>Block Storage</h2>
+          <p>Description</p>
+          <p><button type="button" id="create_blockvolume" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> Create and Attach Block Volume &raquo;</button></p>
+        </div>
+        <div class="col-md-4">
+          <h2>Object Storage</h2>
+          <p>Description</p>
+          <p><button type="button" id="create_objstr" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> Create and Use Object Storage &raquo;</button></p>
+        </div>
+      </div>
+      <hr>
+
+      <div class="row">
+        <div class="col-md-4">
+          <h2>File Storage</h2>
+          <p>Description</p>
+        </div>
+        <div class="col-md-4">
+          <h2>Databases</h2>
+          <p>Description</p>
+        </div>
+        <div class="col-md-4">
+          <h2>Advanced Networking</h2>
+          <p>Description</p>
+        </div>
+      </div>
+
+      <hr>
+      <footer>
+        <p>&copy; 2022 SM Solution Engineers, Inc.</p>
+      </footer>
+    </div> <!-- /container -->
+
+
+
+  <!-- The Modal -->
+  <div class="modal" id="tutorials">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Modal Title</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+          
+        <!-- Modal body -->
+        <div class="modal-body">
+            <div id="carouseltutorials" class="carousel slide" data-ride="carousel" data-interval="0">
+
+                <ol class="carousel-indicators">
+                    <li data-target="#carouseltutorials" data-slide-to="0" class="active"></li>
+                    <li data-target="#carouseltutorials" data-slide-to="1"></li>
+                    <li data-target="#carouseltutorials" data-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <p>Default</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p>Default</p>
+                  </div>
+                  <div class="carousel-item">
+                    <p>Default</p>
+                  </div>
+                </div>
+
+                <a class="carousel-control-prev" href="#carouseltutorials" role="button" data-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Previous</span>
+                </a>
+                <a class="carousel-control-next" href="#carouseltutorials" role="button" data-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="sr-only">Next</span>
+                </a>
+            </div>
+        </div>
+          
+        
+        <!-- Modal footer -->
+        <div class="modal-footer">
+            <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div> 
+
+    </div>
+  </div>
+</div>
+<!--End Modal-->
+
+<!-- IMG MODAL -->
+<div class="modal fade bd-example-modal-xl" id="imagess">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+        <button type="button" id="img-close" data-dismiss="modal">&times;</button>
+        <img id="img-main" class="img-responsive" src="" alt="name" /> 
+      </div>
+    </div>
+</div>
+<!-- END IMG MODAL -->
+
+<script src="js/tutorials.js"></script>
+
+</body>
+
+</html>

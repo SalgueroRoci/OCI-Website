@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>OCI Workshop</title>
+
+    <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+    <!-- Custom styles for this template -->
+    <link href="css/custom.css" rel="stylesheet">
+    <style>
+      code {
+        background-color: #F5F5F5;
+        padding: 10px; margin: 0; 
+        border-radius: 5px; 
+        display: block; 
+      }
+    </style>
+
+</head>
+
+<body>
+  <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand" href="">OCI Tutorials</a>
+  </nav>
+
+  <!-- Main jumbotron for a primary marketing message or call to action -->
+  <div class="jumbotron">
+    <div class="container">
+      <h1 class="display-4">OCI Workshop Documents</h1>
+      <p class="lead">Labs used for OCI workshop featuring labs, references, and guides. </br>LinK: https://tinyurl.com/ociWorkshops</p>
+      <hr class="my-4">
+    </div>
+  </div>
+
+    <div class="container">
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="col-md-4">
+            <h2>Pre-Requisites</h2>
+            <p>Here are some pre-requisites for the workshop. Oracle Cloud Infrastructure Instances <strong>require SSH keys</strong> in order to SSH into the instances. So you must create your own or download ones provided. </p>
+
+            <p><a class="btn btn-outline-dark" target="_blank"  href="https://www.puttygen.com/">PuttyGen Download &raquo;</a>  
+              <a class="btn btn-info" target="_blank" href="https://www.cloudinsidr.com/content/how-to-create-openssh-keys-on-a-windows-desktop-for-remote-access-to-a-linux-server/" role="button">Guide &raquo;</a></p>
+            <p><a class="btn btn-outline-dark" target="_blank" href="https://docs.cloud.oracle.com/iaas/Content/GSG/Tasks/creatingkeys.htm" role="button">Gen SSH key Linux/MacOS &raquo;</a>
+               <button type="button" class="btn btn-info" data-toggle="modal" data-target="#linuxCommand">
+                Run &raquo;
+              </button></p>
+            <p><a class="btn btn-outline-dark" target="_blank" href="oci_workshop/linux-ssh-keys.zip" role="button">Linux SSH keys &raquo;</a></p>
+            <p><a class="btn btn-outline-dark" target="_blank" href="oci_workshop/windows-ssh-keys.zip" role="button">Windows SSH keys &raquo;</a></p>
+          </div>
+          <div class="col-md-4">
+          </br>
+            <h4>Workshop Tools</h4>
+            <p>Some materials to supplement the workshop. Here is an extension that has all the tutorials to guide through OCI. As well as other materials to make the workshop easier.</p>
+            <p><a class="btn btn-outline-dark" target="_blank" href="https://chrome.google.com/webstore/detail/oci-workshop-engine/pjonegmmmclaihfglajojmfcpfambpcd" role="button">OCI Tutorials Extension &raquo;</a></p>
+            <p><a class="btn btn-outline-dark" target="_blank" href="https://chrome.google.com/webstore/detail/oci-shortcut/dgfpcpfhfonjofpdijkjednehgidccad" role="button">OCI Shortcut Extension &raquo;</a></p>
+            <p><a class="btn btn-outline-dark" target="_blank" href="oci_workshop/extension.html" role="button">OCI Extention Tutorials Website WIP &raquo;</a></p> 
+            <p><a class="btn btn-outline-dark" target="_blank" href="https://gmp.oracle.com/captcha/index.php" role="button">Guest Password for Oracle Network &raquo;</a></p>
+         </div>
+         <div class="col-lg-4">
+          </br>
+             <h4>Relevant Workshop Guides</h4>
+             <p>Documentation and workshop materials to help guide with the <strong>current</strong> workshop.</p>
+             <p><a class="btn btn-info" target="_blank" href="" role="button">WIP &raquo;</a></p>
+          </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-md-4">
+              </br>
+                 <h4>Official OCI Walkthroughs and Demos</h4>
+                 <p>Official Workshops from Oracle. Here are tutorials to provide the basics including IAM, Compute, Storage, and Databases. Oracle Cloud Infrastructure provides trial accounts to get started. </p>
+                 <p><a class="btn btn-outline-dark" target="_blank" href="https://github.com/oracle/learning-library/tree/master/oci-library" role="button">OCI Github Hands-on Labs &raquo;</a></p>
+                 <p><a class="btn btn-outline-dark" target="_blank" href="http://auto.us.oracle.com/imassetportal/" role="button">Autonomous Solution Demos and Workshops &raquo;</a></p>
+                 <p><a class="btn btn-outline-dark" target="_blank" href="https://docs.cloud.oracle.com/iaas/Content/General/Reference/aqswhitepapers.htm" role="button">Technical White Papers OCI Docs &raquo;</a></p>
+                 <p><a class="btn btn-outline-dark" target="_blank" href="https://cloud.oracle.com/en_US/iaas/technical-resources" role="button">Technical Resources &raquo;</a></p>
+              </div>
+          <div class="col-md-4">
+            </br>
+               <h4>JDE Workshop Materials</h4>
+               <p> For this workshop we're doing for JD Edwards EnterpriseOne Trial. Here are tutorials to provide the basics including IAM, Compute, Storage, and Databases around JDE one node.</p>
+               <p><a class="btn btn-outline-dark" target="_blank" href="oci_workshop/Lab_1_-_IAM_Walkthrough.pdf" role="button">Sign in and IAM Walkthrough &raquo;</a></p>                 
+               <p><a class="btn btn-outline-dark" target="_blank" href="https://apexapps.oracle.com/pls/apex/f?p=44785:52:2982022418355:::52:P52_CONTENT_ID,P52_MODULE_ID,P52_ACTIVITY_ID,P52_EVENT_ID:25918,3636,17156,6152" role="button">Creating a VCN for JDE &raquo;</a></p>
+              <p><a class="btn btn-outline-dark" target="_blank" href="https://apexapps.oracle.com/pls/apex/f?p=44785:52:2982022418355:::52:P52_CONTENT_ID,P52_MODULE_ID,P52_ACTIVITY_ID,P52_EVENT_ID:25931,3647,17186,6152" role="button">Creating a JDE Compute Instance &raquo;</a></p>
+              <p><a class="btn btn-outline-dark" target="_blank" href="https://apexapps.oracle.com/pls/apex/f?p=44785:52:2982022418355:::52:P52_CONTENT_ID,P52_MODULE_ID,P52_ACTIVITY_ID,P52_EVENT_ID:25932,3647,17187,6152" role="button">JDE First-Time Configuration &raquo;</a></p>
+          </div>
+          <div class="col-md-4">
+            </br>
+               <h4>Database Migration Lab</h4>
+               <p>Workshop on how to migrate a database to OCI, restoring a database, and backing up a database on OCI.</p>
+               <p><a class="btn btn-outline-dark" target="_blank" href="https://docs.cloud.oracle.com/iaas/Content/Database/Tasks/backingupFRA.htm" role="button">Backing up to Local Storage &raquo;</a></p>
+               <p><a class="btn btn-outline-dark" target="_blank" href="https://docs.cloud.oracle.com/iaas/Content/Database/Tasks/recoveringCLI.htm" role="button">Recovering a Database &raquo;</a></p>
+               <p><a class="btn btn-outline-dark" target="_blank" href="https://docs.cloud.oracle.com/iaas/Content/Database/Tasks/backingupOSrman.htm" role="button">Backing Up to Object Storage &raquo;</a></p>
+               <p><a class="btn btn-outline-dark" target="_blank" href="https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/servicegateway.htm#setup" role="button">Setting Up a Service Gateway &raquo;</a></p>
+            </div>
+        </div>
+        <hr class="my-4">
+  
+        <footer>
+          <p>&copy; 2022 SM Solution Engineers, Inc.</p>
+        </footer>
+      </div> <!-- /container -->
+
+  <!-- The Modal -->
+  <div class="modal" id="linuxCommand">
+    <div class="modal-dialog">
+      <div class="modal-content">
+      
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Generate Demo SSH key</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+          
+        <!-- Modal body -->
+        <div class="modal-body">
+            Enter the following command: 
+            <br />
+            <code>ssh-keygen -t rsa -N "" -b 2048 -C "demoworkshop" -f ~/Downloads/demoworkshop</code>
+            Then Press <kbd>Enter</kbd>.
+        </div>
+          
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+      </div> 
+    </div>
+  </div>
+    
+
+</body>
+
+</html>
