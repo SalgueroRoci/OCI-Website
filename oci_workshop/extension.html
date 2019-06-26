@@ -19,13 +19,105 @@
 
     <!-- Custom styles for this template -->
     <link href="css/custom.css" rel="stylesheet">
+    <style>
+      .modal-body {
+        padding: 25px 25px 50px 25px;
+      }
+      #carouseltutorials {
+        min-height: 200px; 
+      }
+
+      .carousel-indicators li {
+          background-color: rgb(143, 124, 124);
+      }
+      .carousel-indicators li.active {
+          background-color: rgb(34, 0, 0);
+      }
+      .carousel-indicators {
+          position: absolute; 
+          bottom: -115px; 
+      }
+
+      .carousel-control-prev,
+      .carousel-control-next {
+          display: block;
+          position: absolute;
+          height: 30px;
+          width: 30px;
+          top: 110%; 
+      }
+      .carousel-control-prev-icon {
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+
+      }
+      .carousel-control-next-icon {
+          background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+      }
+      .navbar {
+        justify-content:right;
+      }
+      /*----Custom for Extension----*/
+      small {
+          display: block; 
+          padding: 10px; 
+          margin: 10px 0; 
+          background-color: rgb(235, 235, 235);
+      }
+      code {
+          background-color: #F5F5F5;
+          padding: 10px; margin: 0; 
+          border-radius: 5px; 
+          display: block; 
+      }
+      .btn-primary {
+          white-space:normal !important;
+          text-align: left;
+      }
+      .col-md-4 {
+        border-right: 1px dashed rgb(201, 192, 192);
+        border-left: 1px dashed rgb(201, 192, 192);
+      }
+
+      /* ------Images pop ups ------- */
+      .img-responsive, .img-inner {
+        max-width: 450px;
+      }
+      @media (min-width: 576px) {
+        .img-responsive {
+          height: 100%;
+          max-width: 500px;
+        }
+      }
+      @media (min-width: 992px) {
+        .img-responsive {
+          height: 100%;
+          max-width: 800px;
+        }
+      }
+      @media (min-width: 1200px) {
+        .img-responsive {
+          height: 100%;
+          max-width: 1140px;
+        }
+      }
+      #img-close {
+        text-align: right; 
+        font-weight: 700; 
+        font-size: 1.5rem;
+        color: #000; 
+        text-shadow: 0 1px 0 #fff;
+        opacity: .5;
+      }
+    </style>
 
 
 </head>
 
 <body>
   <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="extension.html">OCI Workshop Tutorials</a>
+      <a class="navbar-brand" href="../ociworkshop.html">Home</a>
+      <a class="navbar-brand" href="extension.html">Workshop Tutorials</a>
+      <a class="navbar-brand" href="adv_tutorials.html">Advanced Tutorials</a>
   </nav>
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -44,7 +136,7 @@
       <div class="row">
           <div class="col-md-4">
             <h2>Identity Access Management</h2>
-            <p>Description</p>
+            <p>Lets you control who has access to your cloud resources. You can control what type of access a group of users have and to which specific resources. IAM components (compartments, users, groups, policies, and federation) help administer and keep track of your OCI resources easier. </p>
             <p><button type="button" id="create_compartments" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> Create a Compartment &raquo;</button></p>
             <p><button type="button" id="users_and_groups" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> Create a Users, and Groups &raquo;</button></p>
             <p><button type="button" id="user_credentials" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> User Credentials &raquo;</button></p>
@@ -53,12 +145,12 @@
           </div>
           <div class="col-md-4">
             <h2>Governance</h2>
-            <p>Description</p>
+            <p>Part of Identity and Access Management. Oracle Cloud Infrastructure offers governing tools to help administer and keep track of Oracle Cloud resources. From tags, cost tags, adn audit logs help keep track of Oracle resources in your organization. </p>
             <p><button type="button" id="manage_tags" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> Managing Tags &raquo;</button></p>
           </div>
           <div class="col-md-4">
             <h2>Networking</h2>
-            <p>Description</p>
+            <p>On Oracle Cloud provides you with Virtual Cloud Networks (VCN) for your resources as well as other components to help with different connectivity models. These tutorials will help you with the basics of networking from VCN , subnetting, route tables, security list, and internet gateway.</p>
             <p><button type="button" id="create_vcn" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> Creating a VCN &raquo;
             </button></p>
             <p><button type="button" id="create_security_lists" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> Creating Security Lists &raquo;</button></p>
@@ -73,18 +165,18 @@
       <div class="row">
         <div class="col-md-4">
           <h2>Compute</h2>
-          <p>Description</p>
+          <p>Oracle lets you provision and manage compute hosts, known as instances. Can use instances to host your applications and access it securely from your computer. In these tutorials will walkthrough the different instances Oracle Cloud offers.</p>
           <p><button type="button" id="create_compute" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> Creating a Compute Instance &raquo;</button></p>
           
         </div>
         <div class="col-md-4">
           <h2>Block Storage</h2>
-          <p>Description</p>
+          <p>Block Volume service lets you provision more storage you can attach to your compute instances. You can create, attach, connect, and move volumes as needed for your applications and storage requirments. You can use the colume like a regular hard drive.</p>
           <p><button type="button" id="create_blockvolume" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> Create and Attach Block Volume &raquo;</button></p>
         </div>
         <div class="col-md-4">
           <h2>Object Storage</h2>
-          <p>Description</p>
+          <p>Object Sotrage is a storage platform that can store an unlimited amount of unstructed data of any content type. Can be used to safely and securely store or retrieve data directly from the internet of cloud platforms.</p>
           <p><button type="button" id="create_objstr" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> Create and Use Object Storage &raquo;</button></p>
         </div>
       </div>
@@ -93,7 +185,7 @@
       <div class="row">
         <div class="col-md-4">
           <h2>File Storage</h2>
-          <p>Description</p>
+          <p>Oracle provides a network file system that can access among instances. OCI instances and On-Prem machines can access File Storage system using fast connect and VPN. Supports NFSv3 protocol and Network Lock Manager (NLM) protocol for file locking.</p>
         </div>
         <div class="col-md-4">
           <h2>Databases</h2>
@@ -101,7 +193,8 @@
         </div>
         <div class="col-md-4">
           <h2>Advanced Networking</h2>
-          <p>Description</p>
+          <p>Advanced Networking includes tutorials outside of basic VCN configuration and resources. Basic understanding of VCNs, route tables, and security lists are  recommended. Certain topics on Private/Public Load Balancer, NAT Gateway, Service Gateway, and VCN Local and Remote Peering will be covered.</p>
+          <p><button type="button" id="create_nat_gateway" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> Create NAT Gateway &raquo;</button></p>
         </div>
       </div>
 

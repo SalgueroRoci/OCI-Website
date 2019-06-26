@@ -19,12 +19,104 @@
 
     <!-- Custom styles for this template -->
     <link href="css/custom.css" rel="stylesheet">
+    <style>
+        .modal-body {
+          padding: 25px 25px 50px 25px;
+        }
+        #carouseltutorials {
+          min-height: 200px; 
+        }
+  
+        .carousel-indicators li {
+            background-color: rgb(143, 124, 124);
+        }
+        .carousel-indicators li.active {
+            background-color: rgb(34, 0, 0);
+        }
+        .carousel-indicators {
+            position: absolute; 
+            bottom: -115px; 
+        }
+  
+        .carousel-control-prev,
+        .carousel-control-next {
+            display: block;
+            position: absolute;
+            height: 30px;
+            width: 30px;
+            top: 110%; 
+        }
+        .carousel-control-prev-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5-2.5-2.5 2.5-2.5-1.5-1.5z'/%3E%3C/svg%3E") !important;
+  
+        }
+        .carousel-control-next-icon {
+            background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23000000' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5 2.5 2.5-2.5 2.5 1.5 1.5 4-4-4-4z'/%3E%3C/svg%3E") !important;
+        }
+        .navbar {
+          justify-content:right;
+        }
+        /*----Custom for Extension----*/
+        small {
+            display: block; 
+            padding: 10px; 
+            margin: 10px 0; 
+            background-color: rgb(235, 235, 235);
+        }
+        code {
+            background-color: #F5F5F5;
+            padding: 10px; margin: 0; 
+            border-radius: 5px; 
+            display: block; 
+        }
+        .btn-primary {
+            white-space:normal !important;
+            text-align: left;
+        }
+        .col-md-4 {
+          border-right: 1px dashed rgb(201, 192, 192);
+          border-left: 1px dashed rgb(201, 192, 192);
+        }
+  
+        /* ------Images pop ups ------- */
+        .img-responsive, .img-inner {
+          max-width: 450px;
+        }
+        @media (min-width: 576px) {
+          .img-responsive {
+            height: 100%;
+            max-width: 500px;
+          }
+        }
+        @media (min-width: 992px) {
+          .img-responsive {
+            height: 100%;
+            max-width: 800px;
+          }
+        }
+        @media (min-width: 1200px) {
+          .img-responsive {
+            height: 100%;
+            max-width: 1140px;
+          }
+        }
+        #img-close {
+          text-align: right; 
+          font-weight: 700; 
+          font-size: 1.5rem;
+          color: #000; 
+          text-shadow: 0 1px 0 #fff;
+          opacity: .5;
+        }
+      </style>
 
 </head>
 
 <body>
   <nav class="navbar navbar-dark bg-dark">
-      <a class="navbar-brand" href="extension.html">OCI Workshop Tutorials Home</a>
+      <a class="navbar-brand" href="../ociworkshop.html">Home</a>
+      <a class="navbar-brand" href="extension.html">Workshop Tutorials</a>
+      <a class="navbar-brand" href="adv_tutorials.html">Advanced Tutorials</a>
   </nav>
 
   <!-- Main jumbotron for a primary marketing message or call to action -->
@@ -43,8 +135,8 @@
       <div class="row">
         <div class="col-md-4">
           <h2>Jump Server and Load Balancer</h2>
-          <p>Description</p>
-          <p><button type="button" id="jump_server_lb0" class="btn btn-primary btn-block btn-block" data-toggle="modal" data-target="#tutorials">Create Compartment &raquo;</button></p>
+          <p>Common networking usecase is to have a jump server so a server is protected in a private subnet not accessible directly from the internet. Another is having a load balancer for high </p>
+          <p><button type="button" id="jump_server_lb0" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials"> Create a Compartment &raquo;</button></p>
           <p><button type="button" id="jump_server_lb1" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials">Create VCN &raquo;</button></p>
           <p><button type="button" id="jump_server_lb2" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials">Create Internet and NAT Gateway &raquo;</button></p>
           <p><button type="button" id="jump_server_lb3" class="btn btn-primary btn-block" data-toggle="modal" data-target="#tutorials">Create Security List and Route Table &raquo;</button></p>

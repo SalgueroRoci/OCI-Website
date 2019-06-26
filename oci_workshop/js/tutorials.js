@@ -146,13 +146,13 @@ $("#grant_policies").on('click', function(){
     In this tutorial we will guide you how to apply policies to groups.</br> A policy specifies who can have access which OCI resource that your company has, and how.
     </div>
     <div class="carousel-item">
-    Click the menu button on top left. Scroll down to <strong>"Identity"</strong> and click <strong>"Policies"</strong>. </br> {{img-url:/images/tutorials/idpolicies.png}} 
+    Click the menu button on top left. Scroll down to <strong>"Identity"</strong> and click <strong>"Policies"</strong>. </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/idpolicies.png"/></a> 
     </div>
     <div class="carousel-item">
-    Click <strong>"Create Policy"</strong>. Add a <strong>"Name"</strong> and a <strong>"Description"</strong>. </br> {{img-url:/images/tutorials/idcreatepolicy.png}}<small><em>Tip:</em>You can choose to have the policy expire or stay current. Next we will actually add our policies.</small>
+    Click <strong>"Create Policy"</strong>. Add a <strong>"Name"</strong> and a <strong>"Description"</strong>. </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/idcreatepolicy.png"/></a><small><em>Tip:</em>You can choose to have the policy expire or stay current. Next we will actually add our policies.</small>
     </div>
     <div class="carousel-item">
-    Each statement follows this basic syntax: </br> <code>Allow group <group_name> to <verb> <resource-type> in compartment <compartment_name></code></br>Some cases you may want to apply to a tenancy, heres an example: <code>Allow group <group_name> to <verb> <resource-type> in tenancy</code> <small><em>Tip:</em> Policies only allow access, they cannot deny it. </small> </br> {{img-url:/images/tutorials/idstatements.png }}
+    Each statement follows this basic syntax: </br> <code>Allow group <group_name> to <verb> <resource-type> in compartment <compartment_name></code></br>Some cases you may want to apply to a tenancy, heres an example: <code>Allow group <group_name> to <verb> <resource-type> in tenancy</code> <small><em>Tip:</em> Policies only allow access, they cannot deny it. </small> </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/idstatements.png "/></a>
     </div>
     <div class="carousel-item">
     For this tutorial add the common admin policy: <code>Allow group <group_name> to manage All Resources in compartment <compartment_name></code> </br>Replacing 'group_name' and 'compartment_name' with the previous created.</br><small><em>Tip:</em> Here are common policies you may encounter and use. <a href="https://docs.cloud.oracle.com/iaas/Content/Identity/Concepts/commonpolicies.htm">Click here.</a></small>
@@ -266,10 +266,10 @@ $("#create_vcn").on('click', function(){
     Since we have specific network configuration choose <strong>"CREATE VIRTUAL CLOUD NETWORK ONLY"</strong>. </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/vcnonly.png"/></a>
     </div>
     <div class="carousel-item">
-    Apply the proper contiguous IPv4 CIDR block for the VCN.</br>Oracle recommends using one of the private IP address ranges specified in RFC 1918 (10.0.0.0/8, 172.16/12, and 192.168/16). However, you can use a publicly routable range. Also, OCI has a range of /16 and /30 for the network. <small><em>Tip:</em> If you plan to peer this VCN with another VCN, the VCNs must not have overlapping CIDRs. Also network size <strong>cannot</strong> be changed after created.</small>
+    Under CIDR Block apply the proper contiguous IPv4 CIDR block for the VCN.</br></br>Oracle recommends using one of the private IP address ranges specified in RFC 1918 (10.0.0.0/8, 172.16/12, and 192.168/16). However, you can use a publicly routable range. Also, OCI has a range of /16 and /30 for the network. <small><em>Tip:</em> If you plan to peer this VCN with another VCN, the VCNs must not have overlapping CIDRs. Also network size <strong>cannot</strong> be changed after created.</small>
     </div>
     <div class="carousel-item">
-    Check 'Use DNS hostname' for this VCN. Leave DNS Label default and click "Create Virtual Cloud Network" button. </br><a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/vcncustom.png"/></a> <small><em>Tip:</em> The default resources created are route table, security list, and DHCP options. Other resources like Internet Gateway and Subnets must be created manually. </br> This offers more customizations such as creating a private only subnets. Refer to the other tutorials to create each resource.</small>
+    Check 'Use DNS hostnames in his VCN'. </br>Leave DNS Label default and click \"Create Virtual Cloud Network\" button. </br><a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/vcncustom.png"/></a> <small><em>Tip:</em> The default resources created are route table, security list, and DHCP options. Other resources like Internet Gateway and Subnets must be created manually. </br> This offers more customizations such as creating a private only subnets. Refer to the other tutorials to create each resource.</small> <small><em>Tip2:</em> 'Use DNS hostnames' is rewuired if using Database PaaS services.</small>
     </div>
     <div class="carousel-item">
     Your Virtual Cloud Network is provisioned! Use the other tutorials to create additional resources within the VCN. <small><em>Tip:</em> Keep in mind you can create more Route Tables and Security List than the default and apply them to different subnets.</small>
@@ -294,7 +294,7 @@ $("#create_security_lists").on('click', function(){
     `; 
     body = `
     <div class="carousel-item active">
-    VCNs are created with one default security lists, and more can be created to manage different security list for each subnet. </br> In this tutorial we will show you how to create a Security List.
+    A security list is a virtual firewall rules for your VCN (outside of the instance firewall rules). Helps to specify which traffic is allowed in and out of your VCNs. </br></br>VCNs are created with one default security lists, and more can be created to manage different security list for each subnet. </br> In this tutorial we will show you how to create a Security List.
     </div>
     <div class="carousel-item">
     Click the menu button on top left. Scroll down to <strong>"Networking"</strong> and click <strong>"Virtual Cloud Networks"</strong>. </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/vcnmenu.png"/></a>
@@ -303,7 +303,7 @@ $("#create_security_lists").on('click', function(){
     Choose the VCN you wish to add security list to. Under Resources, Click Security Lists, then Create Security List. </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/vcnseclist.png"/></a> 
     </div>
     <div class="carousel-item">
-    Choose the compartment for the Security List and Apply a name. Here allows you to add all the Ingress and Egress rules for the security list. </br> <small><em>Tip:</em> For more information on Ingress vs Egress and Stateless vs Stateful go to<a href='https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/securitylists.htm?Highlight=egress' target='_blank'>here.</a></small> 
+    Choose the compartment for the Security List and Apply a name. Here allows you to add all the Ingress and Egress rules for the security list. </br> <small><em>Tip:</em> Ingress rules are traffic incomming to your Oracle VCN, and Egress rules are managing traffic outgoing your VCNs. </br> For more information on Ingress vs Egress and Stateless vs Stateful go to <a href='https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/securitylists.htm?Highlight=egress' target='_blank'>here.</a></small>  
     </div>
     <div class="carousel-item">
     Create the Security List. Now, when you create a subnet you can choose the custom Security Lists in the drop down menu instead of the default.
@@ -335,7 +335,7 @@ $("#create_route_table").on('click', function(){
     `; 
     body = `
     <div class="carousel-item active">
-    VCNs are created with one default route table, and more can be created to manage different routes for each subnet. </br> In this tutorial we will show you how to create a Route Table.
+    Virtual Route tables for your VCN help with routing traffic from subnet to destination outside VCN using gateways or specially configured instances. </br></br>VCNs are created with one default route table, and more can be created to manage different routes for each subnet. </br> In this tutorial we will show you how to create a Route Table.
     </div>
     <div class="carousel-item">
     Click the menu button on top left. Scroll down to <strong>"Networking"</strong> and click <strong>"Virtual Cloud Networks"</strong>. </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/vcnmenu.png"/></a>
@@ -370,7 +370,7 @@ $("#create_subnet").on('click', function(){
     `; 
     body = `
     <div class="carousel-item active">
-    Subnets is a subdivision of a VCN. </br> Just like VCNs, each subnet must be a continuous range. Subnets can be AD specific or regional. <small><em>Tip:</em> Subnets contain vNICs, which attach to instances.</small>
+    Subnets are subdivisions of a VCN. </br> Just like VCNs, each subnet must be a continuous range. Subnets contain virtual network interface cards which attach to instances. Can be AD specific or regional and should not overlap with other subnets in the VCN. <small><em>Tip:</em> Subnets can be private or public. private subnets do not allow public IPs on vNICs in the subnet. Public subnets will allow public IP on the vNIC but can be optional.</small>
     </div>
     <div class="carousel-item">
     Click the menu button on top left. Scroll down to <strong>"Networking"</strong> and click <strong>"Virtual Cloud Networks"</strong>. </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/vcnmenu.png"/></a>
@@ -424,7 +424,7 @@ $("#internet_gateway").on('click', function(){
     Click Edit Route Rules. Under Target Type choose Internet Gateway. For destination CIDR block give 0.0.0.0/0, then choose your IG from before under Target Internet Gateway. </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/vcnigcreation.png"/></a>
     </div>
     <div class="carousel-item">
-    Now your resources will have access to the internet and you can SSH and connect to your compute instances!
+    Now your resources will have access to the internet and you can SSH and connect to your compute instances! <small><em>Tip:</em> Make sure you have your security list configured to allow communication between instance and public internet. Suggest allowing Egress Rule Destination CIDR 0.0.0.0/0 and All protocols so instances can communicate out of the VCN. Allow Ingress Rules as needed. Be cautious to Allow All Protocols in Ingress rules!!.</small>
     </div>
     `;
     $(".carousel-indicators").html(pages);
@@ -604,8 +604,8 @@ $("#create_objstr").on('click', function(){
 });
 
 // ====
-$("#jump_server_lb").on('click', function(){
-    $(".modal-title").html("Creating a Block Volume");
+$("#create_nat_gateway").on('click', function(){
+    $(".modal-title").html("Creating NAT Gateway");
     var pages = `
     <li data-target="#carouseltutorials" data-slide-to="0" class="active"></li>
     <li data-target="#carouseltutorials" data-slide-to="1"></li>
@@ -618,28 +618,28 @@ $("#jump_server_lb").on('click', function(){
     `; 
     body = `
     <div class="carousel-item active">
-    Another type of storage for OCI is object storage which offers both "hot" (frequently accessed) storage, and "cold" (archive) storage. </br> Object storage is ideal for having a bucket of data. For this tutorial we will go through how to create object storage. <small><em>Tip:</em> A namespace is top level container for buckers and objects and must be unique. Buckets are a logical container that hold objects.</small>
+    You can add a Network Address Translation (NAT) to your VCN. NAT gateway gives cloud resources without public IP addresses to access the internet without exposing resources to incoming connections.</br></br>In this tutorial we'll showcase how to create a NAT gateway.
     </div>
     <div class="carousel-item">
-    Click the menu button on top left. Scroll down to <strong>"Object Storage"</strong> and click <strong>"Object Storage"</strong>. </br><a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/objmenu.png"/></a> <small><em>Tip:</em> Archive tier is mostly only for uploading objects.</br> Object Storage also has life cycle policies.</small>
+    You should have a VCN already created with a default route table and default security list. Created a public subnet, private subnet, and internet gateway. Refer to previous tutorials on how to create those resources. Should look like this diagram: </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/network_nat_gateway1.png"/></a>
     </div>
     <div class="carousel-item">
-    Click Create Bucket button. When the menu pops up it requires the bucket name, and storage type. Choose either standard or archive. <small><em>Tip:</em> Bucket names must be unique within a tenancy.</small>
+    Provision two linux compute instances in the seperate subnets one in the private subnet and one in public subnet. </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/network_nat_gateway2.png"/></a>
     </div>
     <div class="carousel-item">
-    Click Create Bucket. Now you are able to upload and download objects from the bucket uses. </br>You can use the console, Rest APIs, OCI CLI, and SDK tools. Continue the tutorial to learn how to upload using the console.
+    Next we'll create a NAT gateway so your private compute instance can communicate with the internet. Click on the VCN name and under resources click on NAT gateway. Click on Create NAT gateway. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/network_nat_gateway3.png"/></a></br></br> Apply a name for the gateway and click create. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/network_nat_gateway4.png"/></a>
     </div>
     <div class="carousel-item">
-    Click the bucket name you created. Make sure you choose Objects under Resources. Click on Upload Object. </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/objupload1.png"/></a>
+    You have to add the following route rule for you VCN to use the NAT gateway. Go to your route table and Add Route Rule. Add the following: <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/network_nat_gateway5.png"/></a>
     </div>
     <div class="carousel-item">
-    A new window will allow you to upload new files by dragging and dropping or click browse to choose from your computer. </br><a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/objupload2.png"/></a>
+    In order to test the instance has internet connection through NAT gateway you must SSH into the instance and test a network functionality. </br> You're going to ssh into the public instance then the private instance. <strong>You must have the private key on the public instance in order to ssh from public to private instance</strong> </br> Tranfer the private key to the public instance using scp. Using Linux/Mac: <code>scp [private_key] opc@[public_ip]:/home/opc/.ssh</code> </code> </br> Then SSH into your public instance using your public IP. Linux/Mac: <code>ssh -i [private ssh key path] opc@[public ip] </code>
     </div>
     <div class="carousel-item">
-    Congratulations now you have objects on the object storage! </br>You are able to access them depending on the access to the object storage. For easy access you can set the visibility to public. </br> <small><em>Tip:</em> More information on visibility and Pre-Auth requests <a href='https://docs.cloud.oracle.com/iaas/Content/Object/Tasks/usingpreauthenticatedrequests.htm'>here</a>.</small>
+    Now SSH into your private instance using the private ssh key on the public instance. <code> ssh -i [private key] opc@[private_ip]</code> You should be in the private instance on the private subnet.
     </div>
     <div class="carousel-item">
-    To download objects, click on the three dots on the object will have a menu. In the menu choose <strong>"Download"</strong> if you wish to re-download the file onto your local computer. </br><a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/objdownload.png"/></a>
+    Lastly test the internet connection using ping google.com, traceroute, or an update on the machine such as 'sudo yum update' for Oracle Linux. </br> Congratulations, you created and used a NAT gateway.
     </div>
     `;
     $(".carousel-indicators").html(pages);
