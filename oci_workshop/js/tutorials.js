@@ -498,16 +498,51 @@ $("#create_compute").on('click', function(){
     Click the menu button on top left. Scroll down to <strong>"Compute"</strong> and click <strong>"Instances"</strong>. </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/computemenu.png"/></a>
     </div>
     <div class="carousel-item">
-    Click Create Instance. Choose a name. For high availability there are 3 Availability Domains per region. Choose one where a subnet is available. Under "Operating System" choose your image. For this tutorial we will choose the default Oracle Linux 7.
+    Click Create Instance. Choose a name. For high availability there are 3 Availability Domains per *region. Under "Operating System" choose your image. For this tutorial we will choose the default Oracle Linux 7.<small><em>Tip:</em> Some regions only have one Availability Domain.</small>
     </div>
     <div class="carousel-item">
     Choose Virtual Machines. To determine OCPU number and RAM GB size, OCI uses shapes for the different configurations of both. Choose any available or depending on workload. </br><small><em>Tip:</em> Bare Metal is required if you don't need virtualization.</br> Oracle CPU is equivalent to one physical core.</small>
     </div>
     <div class="carousel-item">
-    Add your public key in order to SSH into your instance. </br>Under Networking choose the VCN you created before and the subnet. Skip Advanced Settings for now. </br></br> Click Create to create your first compute instance. </br><small><em>Tips:</em> For Mac/Linux you can easily copy your keys using "pbcopy < ~/.ssh/id_rsa.pub" command. </small>
+    Add your public key in order to SSH into your instance. To learn how to create an SSH key pair on <a target='_blank' href='https://docs.cloud.oracle.com/iaas/Content/GSG/Tasks/creatingkeys.htm'>Mac/Linux</a> or <a target='_blank' href='https://www.cloudinsidr.com/content/how-to-create-openssh-keys-on-a-windows-desktop-for-remote-access-to-a-linux-server/'> Windows</a>. </br>Under Networking choose the VCN you created before and the subnet. Skip Advanced Settings for now. </br></br> Click Create to create your first compute instance. </br><small><em>Tips:</em> For Mac/Linux you can easily copy your keys using "pbcopy < ~/.ssh/id_rsa.pub" command. </small>
     </div>
     <div class="carousel-item">
-    Congratulation, you created your first compute. For more information on computes go to the <a href='https://docs.cloud.oracle.com/iaas/Content/Compute/Concepts/computeoverview.htm' target='_blank'>documentation</a>
+    Click on create compute. </br> Congratulation, you created your first compute. For more information on computes go to the <a href='https://docs.cloud.oracle.com/iaas/Content/Compute/Concepts/computeoverview.htm' target='_blank'>documentation</a>
+    </div>
+    `;
+    $(".carousel-indicators").html(pages);
+    $(".carousel-inner").html(body);
+    img_popup();
+});
+
+$("#create_oraclecompute").on('click', function(){
+    $(".modal-title").html("Creating a Oracle Compute Image");
+    var pages = `
+    <li data-target="#carouseltutorials" data-slide-to="0" class="active"></li>
+    <li data-target="#carouseltutorials" data-slide-to="1"></li>
+    <li data-target="#carouseltutorials" data-slide-to="2"></li>
+    <li data-target="#carouseltutorials" data-slide-to="3"></li>
+    <li data-target="#carouseltutorials" data-slide-to="4"></li>
+    <li data-target="#carouseltutorials" data-slide-to="5"></li>
+    `; 
+    body = `
+    <div class="carousel-item active">
+    After learning about creating compute instances there is one type where you can use Oracle Images from marketplace that is integrated within the console. You can create Oracle Images such as Oracle DB or Oracle Enterprise Manager etc. <small><strong>Note:</strong> A VCN, and compartment must already be created.</small>
+    </div>
+    <div class="carousel-item">
+    Click the menu button on top left. Scroll down to <strong>"Compute"</strong> and click <strong>"Instances"</strong>. </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/computemenu.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Click Create Instance. Choose a name. Choose a Availability Domain. Choose one where a subnet is available (AD or regional subnet). Under "Operating System" click the Oracle Images. You can choose from Pre-built Oracle enterprise images and solutions for OCI. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/customeoracle.png"/></a><small><em>Tip:</em> You can also choose the Partner Images tab to use third-party images from Oracle partners.</small> 
+    </div>
+    <div class="carousel-item">
+    For now we'll create an Oracle Database on Compute (not PaaS). Choose Oracle Database, click on the arrow to choose the image version. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/customeoracledb.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Select Virtual Machine and choose an available instance shape. Paste or drag your public key. Choose the right VCN and subnet. Click Create Instance. <small><em>Tips:</em> For Mac/Linux you can easily copy your keys using "pbcopy < ~/.ssh/id_rsa.pub" command. </small>
+    </div>
+    <div class="carousel-item">
+    Congratulation, you created your Oracle DB using Oracle Marketplace Image. For more information on computes go to the <a href='https://docs.cloud.oracle.com/iaas/Content/Compute/Concepts/computeoverview.htm' target='_blank'>documentation</a>
     </div>
     `;
     $(".carousel-indicators").html(pages);
@@ -603,9 +638,53 @@ $("#create_objstr").on('click', function(){
     img_popup();
 });
 
+//===
+$("#create_filestorage").on('click', function(){
+    $(".modal-title").html("Creating a File Storage");
+    var pages = `
+    <li data-target="#carouseltutorials" data-slide-to="0" class="active"></li>
+    <li data-target="#carouseltutorials" data-slide-to="1"></li>
+    <li data-target="#carouseltutorials" data-slide-to="2"></li>
+    <li data-target="#carouseltutorials" data-slide-to="3"></li>
+    <li data-target="#carouseltutorials" data-slide-to="4"></li>
+    <li data-target="#carouseltutorials" data-slide-to="5"></li>
+    <li data-target="#carouseltutorials" data-slide-to="6"></li>
+    <li data-target="#carouseltutorials" data-slide-to="7"></li>
+    `; 
+    body = `
+    <div class="carousel-item active">
+    In this tutorial will go over steps on creating a File System Storage and having a compute instance use it. </br> We require you to have a VCN with a public subnet, and internet gateway already created. As well as have a compute instance you are able to ssh into created. </br> Please have the following already: <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/filestart.png"/></a>
+    </div>
+    <div class="carousel-item">
+    First we'll create an File Storage System. Click the menu button on top left. Scroll down to <strong>"File Storage"</strong> and click <strong>"File Systems"</strong>. </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/filemenu.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Click Create File System. Click on Edit Details to give it a memorable name. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/filecreate1.png"/></a> </br>Under <strong>Mount Target Information</strong> edit information and give a mount target name. Select the VCN you want to use for the File System. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/filecreate2.png"/></a><small><em>Tip:</em> File Systems can connect to any compute in the VCN regardless of AD located.</small>
+    </div>
+    <div class="carousel-item">
+    File Systems require certain protocols and ports to be open. So in your security lists add the following TCP ports 2048-2050, 111, and UDP 2048, 111 for your VCN (example 10.0.0.0/16). <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/filevcnsl1.png"/></a><a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/filevcnsl2.png"/></a>
+    </div>
+    <div class="carousel-item">
+    On Oracle Console you can find the mount targets for your File System. Click on your file system then click on the Export Path created. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/filemount1.png"/></a> Click on Mount Commands and you'll use these to mount on your compute instance. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/filemount2.png"/></a> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/filemount3.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Next ssh into your instance you wish to mount the file system to. Example for Oracle Linux: <code>sudo yum install nfs-utils</br>sudo mkdir -p /mnt/TestFS</br>sudo mount 10.x.x.x:/TestFS /mnt/TestFS</code>
+    </div>
+    <div class="carousel-item">
+    Congrats! You can now use your your file system storage. To see if it worked just use the command <code> df -h </code> to list our all the Filesystem and Mount points.
+    </div>
+    <div class="carousel-item">
+    For more documentation on File Storage <a target='_blank' href='https://docs.cloud.oracle.com/iaas/Content/File/Concepts/filestorageoverview.htm'>click here.</a>
+    </div>
+    `;
+    $(".carousel-indicators").html(pages);
+    $(".carousel-inner").html(body);
+    img_popup();
+});
+
 // ====
 $("#create_nat_gateway").on('click', function(){
-    $(".modal-title").html("Creating NAT Gateway");
+    $(".modal-title").html("Creating a NAT Gateway");
     var pages = `
     <li data-target="#carouseltutorials" data-slide-to="0" class="active"></li>
     <li data-target="#carouseltutorials" data-slide-to="1"></li>
@@ -640,6 +719,61 @@ $("#create_nat_gateway").on('click', function(){
     </div>
     <div class="carousel-item">
     Lastly test the internet connection using ping google.com, traceroute, or an update on the machine such as 'sudo yum update' for Oracle Linux. </br> Congratulations, you created and used a NAT gateway.
+    </div>
+    `;
+    $(".carousel-indicators").html(pages);
+    $(".carousel-inner").html(body);
+    img_popup();
+});
+
+$("#creating_local_peering").on('click', function(){
+    $(".modal-title").html("Creating a Local Peering");
+    var pages = `
+    <li data-target="#carouseltutorials" data-slide-to="0" class="active"></li>
+    <li data-target="#carouseltutorials" data-slide-to="1"></li>
+    <li data-target="#carouseltutorials" data-slide-to="2"></li>
+    <li data-target="#carouseltutorials" data-slide-to="3"></li>
+    <li data-target="#carouseltutorials" data-slide-to="4"></li>
+    <li data-target="#carouseltutorials" data-slide-to="5"></li>
+    <li data-target="#carouseltutorials" data-slide-to="6"></li>
+    <li data-target="#carouseltutorials" data-slide-to="7"></li>
+    <li data-target="#carouseltutorials" data-slide-to="8"></li>
+    <li data-target="#carouseltutorials" data-slide-to="9"></li>
+    <li data-target="#carouseltutorials" data-slide-to="10"></li>
+    `; 
+    body = `
+    <div class="carousel-item active">
+    You can extend your VCN by connecting two VCNs in the same region together to communicate with Private IP addresses without routing traffic ovver the internet. Can be in the same or different Oracle Tenancy. <small><em>Tip:</em> To peer VCN require non-overlapping CIDRs in the same region. For peering within different regions you should use Regional Peering.</small>
+    </div>
+    <div class="carousel-item">
+    In the following tutorial we'll create the following architecture to peer two local VCNs. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/localpeerarch.png"/></a>
+    </div>
+    <div class="carousel-item">
+    We'll create the first VCN. Create a VCN with the CIDR block of 192.168.0.0/16. </br>Keep the default <strong>Route Table</strong> and <strong>Security List.</strong> </br> Next create a <strong>Public Subnet</strong> with the CIDR 192.168.0.0/24. </br> Create an <strong>Internet Gateway</strong> and add the following route rule to the VCN (change the internet gateway target with yours) <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/vcnigcreation.png"/></a>
+    </div>
+    <div class="carousel-item">
+    In order for two local VCN to communicate with eachother we require a Local Peering Gateway. </br></br>Choose the VCN we just created, under resources click on Local Peering Gateways. </br> Click Create Local Peering Gateway and give it a friendly name. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/localpeerLPG.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Next we'll create the second VCN. Choose VCN only, apply the following CIDR block: 10.0.0.0/16. Use the default <strong>Route Table</strong> and <strong>Security List.</strong>. </br> Create a <strong>Private Subnet</strong> with CIDR 10.0.0.0/24. Since we have a private subnet we won't create an internet gateway for this VCN.
+    </div>
+    <div class="carousel-item">
+    The second VCN also needs a LPG so create one using a unique name. You'll notice the peering status is shown as "Not Connected". </br> To establish the connection click on the three dot menu icons and Establish Peering Connection. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/localpeernotconn.png"/></a> </br> You can browse for the LPG of VCN1 under the right compartment and VCN <strong>OR</strong> use the OCID from the LPG of the other VCN you wish to connect to. You require the OCID if the LPG is on a different tenancy. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/localpeerocid.png"/></a> 
+    </div>
+    <div class="carousel-item">
+    Now both LPGs should be peered and the Peering Status should change to <strong>"Peered - Connected to a peer".</strong> </br> Still both VCNs won't be able to communicate with each other without updating the route rules and security lists. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/localpeered.png"/></a>
+    </div>
+    <div class="carousel-item">
+    For the first VCN (192.168.0.0/16) in the route table add the following rule. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/localpeerrt1.png"/></a> </br> For security lists edit security rules and add the following for Ingress Rules allow all protocols from the second VCN only. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/localpeersl1.png"/></a>
+    </div>
+    <div class="carousel-item">
+    For the second VCN (10.0.0.0/16) in the route table add the following rule. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/localpeerrt2.png"/></a> For security lists edit security rules and add the following for Ingress Rules allow all protocols from the second VCN only. </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/localpeersl2.png"/></a> Add the same rule to Egress as well.
+    </div>
+    <div class="carousel-item">
+    Now both VCNs should be peered and able to connect. In order to test though <strong>create a compute instance</strong> on each VCN and subnet and SSH into the public instance, then ping or ssh into the private instance.
+    </div>
+    <div class="carousel-item">
+    You should end up with the following architecture. Congrats you peered two VCNs! <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/localpeerarch.png"/></a>
     </div>
     `;
     $(".carousel-indicators").html(pages);
