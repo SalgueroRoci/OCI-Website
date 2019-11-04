@@ -3,6 +3,7 @@
 Websites that hosted OCI workshops for ExaCC and OCI workshops. 
 
 Websites:  
+http://tinyurl.com/ociWorkshop <-- Main Tutorials for [extension](https://chrome.google.com/webstore/detail/oci-workshop-extension/pjonegmmmclaihfglajojmfcpfambpcd)
 http://tinyurl.com/exaccWorkshop  
 https://tinyurl.com/ociWorkshops
 
@@ -37,7 +38,6 @@ Tutorials:
    * Federation
 * Governance
    * Manage Tags
-   * Audit*
 * Networking
    * Create VCN
    * Create Security Lists 
@@ -47,7 +47,7 @@ Tutorials:
    * Reserve Public IP
 * Compute
   * Create Compute
-  * Create Oracle Marketplace Images*
+  * Create Oracle Marketplace Images
   * Create Custom Compute*
 * Block Storage 
    * Create and Attach
@@ -55,14 +55,16 @@ Tutorials:
 * Object Storage 
    * Create, Upload, and Download
    * Create Pre-Authenticated Requests*
-* File Storage*
+* File Storage
    * Create File Storage
-* Databases*
-* Advanced Networking*
+* Databases
+   * Create a ADB database and browse features*
+   * Create a Database* 
+* Advanced Networking
    * NAT Gateway 
-   * Service Gateway 
+   * Service Gateway* 
    * Local VCN peering
-   * Regional VCN Peering
+   * Regional VCN Peering*
 * Advanced Topics
    * Jump Server Load Balancer
 
