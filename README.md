@@ -3,7 +3,7 @@
 Websites that hosted OCI workshops for ExaCC and OCI workshops. 
 
 Websites:  
-http://tinyurl.com/ociWorkshop <-- Main Tutorials for [extension](https://chrome.google.com/webstore/detail/oci-workshop-extension/pjonegmmmclaihfglajojmfcpfambpcd)
+http://tinyurl.com/ociWorkshop <-- Main Tutorials for [extension](https://chrome.google.com/webstore/detail/oci-workshop-extension/pjonegmmmclaihfglajojmfcpfambpcd) oci_workshop folder
 http://tinyurl.com/exaccWorkshop  
 https://tinyurl.com/ociWorkshops
 
@@ -48,17 +48,18 @@ Tutorials:
 * Compute
   * Create Compute
   * Create Oracle Marketplace Images
-  * Create Custom Compute*
+  * Create Custom Compute
 * Block Storage 
    * Create and Attach
-   * Clone and Backup*
+   * Clone and Backup
 * Object Storage 
    * Create, Upload, and Download
    * Create Pre-Authenticated Requests*
 * File Storage
    * Create File Storage
 * Databases
-   * Create a ADB database and browse features*
+   * Create a ADB database* 
+   * Browse ADB features*
    * Create a Database* 
 * Advanced Networking
    * NAT Gateway 

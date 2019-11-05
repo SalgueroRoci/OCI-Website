@@ -549,7 +549,54 @@ $("#create_oraclecompute").on('click', function(){
     $(".carousel-inner").html(body);
     img_popup();
 });
- 
+
+$("#create_customcompute").on('click', function(){
+    $(".modal-title").html("Creating a Custom Compute");
+    var pages = `
+    <li data-target="#carouseltutorials" data-slide-to="0" class="active"></li>
+    <li data-target="#carouseltutorials" data-slide-to="1"></li>
+    <li data-target="#carouseltutorials" data-slide-to="2"></li>
+    <li data-target="#carouseltutorials" data-slide-to="3"></li>
+    <li data-target="#carouseltutorials" data-slide-to="4"></li>
+    <li data-target="#carouseltutorials" data-slide-to="5"></li>
+    <li data-target="#carouseltutorials" data-slide-to="6"></li>
+    <li data-target="#carouseltutorials" data-slide-to="7"></li>
+    <li data-target="#carouseltutorials" data-slide-to="8"></li>
+    `; 
+    body = `
+    <div class="carousel-item active">
+    In this tutorial will go over steps on creating a custom compute instance. If you need a custom OS be imported to OCI you can create a custom image. <small><strong>Note:</strong> A VCN, and compartment must already be created. Know how to create a compute image.</small>
+    </div>
+    <div class="carousel-item">
+    First your virtual image has to be imported to OCI. Import the image to Object Storage using the console or APIs. Click the menu button on top left. Scroll down to <strong>"Object Storage"</strong>. </br> Create a Bucket if one has not been created. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/objstoragecreate.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Upload your image to your new bucket. Click on <strong>"Objects"</strong> and <strong>"Upload Objects"</strong>. Upload your image. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/objstoragecreate2.png"/></a> </br> <small><em>Tip:</em> For linux images should be VMDK or QCOW2 file formats. More info <a href='https://docs.cloud.oracle.com/iaas/Content/Compute/References/bringyourownimage.htm' target='_blank'>here</a> </small>
+    </div>
+    <div class="carousel-item">
+    Save your URI for the object to create a custom image. Click on the options for the object then click on <strong>"View Object Details"</strong>. Save the URI/URL path on a notepad for later. </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/objstoragecreate3.png"/></a> </br> <small><em>Tip:</em> For custom images across regions use Pre-Authenticated Request URI instead. Go to Object Storage -> Pre-Authenticated Request tutorial for more info.</small>
+    </div>
+    <div class="carousel-item">
+    Next you'll create a custom image which will allow you to create compute images to deploy. Click on the menu on the top left and go to Compute and Custom Images </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/customcompute1.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Click on Import Image. Apply a Name, Operating System, and the URI from the previous step. Based on the type of image choose the Image Type and Launch Mode. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/customcompute2.png"/></a> </br> <small><em>Tip:</em> More info on configuration go <a href='https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/imageimportexport.htm#ImportinganImage' target='_blank'>here</a> </small>
+    </div>
+    <div class="carousel-item">
+    Next we'll deploy a compute using the custom image. Go to Compute and Create Instance. Click on <strong>"Change Image Source"</strong>. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/customcompute3.png"/></a> </br> <small><em>Tip:</em> You can also choose to create a compute from the custom compute menu after it is created. </small>
+    </div>
+    <div class="carousel-item">
+    Click on custom images tab and you should see your custom image from the previous step. Fill out the rest and deploy your compute image. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/customcompute4.png"/></a> </br> <small><em>Tip:</em> You can create multiple compute virtual machines using the same image.</small>
+    </div>
+    <div class="carousel-item">
+    Congratulation, you imported your custom image onto OCI. For more information on custom computes go to the <a href='https://docs.cloud.oracle.com/iaas/Content/Compute/Tasks/managingcustomimages.htm' target='_blank'>documentation</a>
+    </div>
+    `;
+    $(".carousel-indicators").html(pages);
+    $(".carousel-inner").html(body);
+    img_popup();
+});
+
 // ====
 $("#create_blockvolume").on('click', function(){
     $(".modal-title").html("Creating a Block Volume");
@@ -587,6 +634,53 @@ $("#create_blockvolume").on('click', function(){
     </div>
     <div class="carousel-item">
     SSH into your instance and paste/run those iSCSI commands. Finally you have your block volume attached to your instance! </br> If you run <code>sudo fdisk -l</code> you can view the attached storage as a new storage device. <small><em>Tip:</em> Make sure to properly format and mount it like you would any storage drive! Use popular format tools like parted.</small>
+    </div>
+    `;
+    $(".carousel-indicators").html(pages);
+    $(".carousel-inner").html(body);
+    img_popup();
+});
+
+$("#manage_blockvolume").on('click', function(){
+    $(".modal-title").html("Backup and Clone a Block Volume");
+    var pages = `
+    <li data-target="#carouseltutorials" data-slide-to="0" class="active"></li>
+    <li data-target="#carouseltutorials" data-slide-to="1"></li>
+    <li data-target="#carouseltutorials" data-slide-to="2"></li>
+    <li data-target="#carouseltutorials" data-slide-to="3"></li>
+    <li data-target="#carouseltutorials" data-slide-to="4"></li>
+    <li data-target="#carouseltutorials" data-slide-to="5"></li>
+    <li data-target="#carouseltutorials" data-slide-to="6"></li>
+    <li data-target="#carouseltutorials" data-slide-to="7"></li>
+    <li data-target="#carouseltutorials" data-slide-to="8"></li>
+    `; 
+    body = `
+    <div class="carousel-item active">
+    Block Volumes allow you to create backups and clones to help manage your storage better. Use Backup to create point in time backup of your data on a block volume. Requires you to restore the backup to use them at a later time. </br> You can choose between manual backup or policy based. <small><em>Note:</em> Backups are encrypted and stored in Oracle Object Storage. </small>
+    </div>
+    <div class="carousel-item">
+    Click the menu button on top left. Scroll down to <strong>"Block Storage"</strong> and click <strong>"Block Volumes"</strong>.
+    </div>
+    <div class="carousel-item">
+    Here will list the block volumes created previously. Click on the block volume you wish to backup. </br> Click on <strong>"Block Volume Backups"</strong> then Create Block Volume Backup. </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/bvbackup.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Give the backup a user friendly name. For backup type you can choose between full backup or incremental backups. </br> Click on <strong>"Create Block Volume Backup"</strong> to finish creating a backup. </br><a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/bvbackup2.png"/></a>
+    </div>
+    <div class="carousel-item">
+    You can also assign a policy for backups which will backup block volumes at different frequency and retention period. Monthly, Weekly, and Daily (Bronze, Silver, Gold). </br> Go back to <strong>"Block Volumes"</strong> and select the menu for the specific block volume. </br><small><em>Tip:</em> For more infromation on Policy Based Backups, visit <a href='https://docs.cloud.oracle.com/iaas/Content/Block/Tasks/schedulingvolumebackups.htm'>here</a>.</small> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/bvbackup3.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Click on Assign Backup Policy. Here you can choose on the policy you want. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/bvbackup4.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Finally you can also create clones for Block Volumes. </br><small><em>Tip:</em> For more infromation on Clone vs Backups go <a href='https://docs.cloud.oracle.com/iaas/Content/Block/Concepts/blockvolumebackups.htm#DifferencesBetweenBlockVolumeBackupsandClones'>here</a>.</small>
+    </div>
+    <div class="carousel-item">
+    To clone a block volume click on the block volume you wish to clone. Choose Block Volume Clone then click on Create Clone. Enter the details you wish for the Clone Volume. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/bvbackup5.png"/></a> </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/bvbackup6.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Congrats! You completed hoe to create a backup and clone of a block volume. This should help with managing your block volumes on OCI!
     </div>
     `;
     $(".carousel-indicators").html(pages);
