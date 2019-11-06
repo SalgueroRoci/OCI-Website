@@ -4,7 +4,9 @@ Websites that hosted OCI workshops for ExaCC and OCI workshops.
 
 Websites:  
 http://tinyurl.com/ociWorkshop <-- Main Tutorials for [extension](https://chrome.google.com/webstore/detail/oci-workshop-extension/pjonegmmmclaihfglajojmfcpfambpcd) oci_workshop folder
+
 http://tinyurl.com/exaccWorkshop  
+
 https://tinyurl.com/ociWorkshops
 
 
@@ -54,22 +56,18 @@ Tutorials:
    * Clone and Backup
 * Object Storage 
    * Create, Upload, and Download
-   * Create Pre-Authenticated Requests*
+   * Create Pre-Authenticated Requests
 * File Storage
    * Create File Storage
 * Databases
-   * Create a ADB database* 
-   * Browse ADB features*
-   * Create a Database* 
+   * Create a ADB database 
+   * Create Oracle Database* 
 * Advanced Networking
    * NAT Gateway 
-   * Service Gateway* 
+   * Service Gateway
    * Local VCN peering
-   * Regional VCN Peering*
 * Advanced Topics
-   * Jump Server Load Balancer
-
- *Soon to be created topics.
+   * Jump Server Load Balancer 
    
     
 

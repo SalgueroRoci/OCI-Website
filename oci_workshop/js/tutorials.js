@@ -19,7 +19,7 @@ $("#create_compartments").on('click', function(){
     `; 
     body = `
     <div class="carousel-item active">
-    In this tutorial we will guide you how to create a compartment. A compartment is a logical container within your tenancy (account) used to seperate OCI resources since every resource belongs to only one compartment. </br> <small><em>Tip:</em> Use compartments to organize and isolate your cloud resources. Some examples: by Project, by Organization, by Use, and/or By User.</br> Policies also grant permission to access specific resources inside specific compartments.</small>
+    In this tutorial we will guide you how to create a compartment. A compartment is a logical container within your tenancy (account) used to separate OCI resources since every resource belongs to only one compartment. </br> <small><em>Tip:</em> Use compartments to organize and isolate your cloud resources. Some examples: by Project, by Organization, by Use, and/or By User.</br> Policies also grant permission to access specific resources inside specific compartments.</small>
     </div>
     <div class="carousel-item">
     Click the <strong>menu button</strong> on top left. </br><a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/menu.png"/></a>
@@ -105,7 +105,7 @@ $("#user_credentials").on('click', function(){
     `; 
     body = `
     <div class="carousel-item active">
-    In order for new users to have access to the console they must have the temporary password for their first sign in. </br> In this tutorial we'll show how to give new user temporary password. <small><em>Tip:</em> Can also be used to reset user passwords. Keep in mind OCI users and IDCS users are seperate unless Federated.</small>
+    In order for new users to have access to the console they must have the temporary password for their first sign in. </br> In this tutorial we'll show how to give new user temporary password. <small><em>Tip:</em> Can also be used to reset user passwords. Keep in mind OCI users and IDCS users are separate unless Federated.</small>
     </div>
     <div class="carousel-item">
     When the user signs in to the Console the first time, they'll be immediately prompted to change the password. If the user waits more than 7 days to initially sign in and change the password, it will expire and an administrator will need to create a new one-time password for the user. <small><em>Tip:</em> This only works for non-Federated users. Non-IDCS users sign in through <a href="https://console.us-phoenix-1.oraclecloud.com/" target="_blank">Infrastructure Console</a> instead of using cloud.oracle.com. </small>
@@ -152,7 +152,7 @@ $("#grant_policies").on('click', function(){
     Click <strong>"Create Policy"</strong>. Add a <strong>"Name"</strong> and a <strong>"Description"</strong>. </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/idcreatepolicy.png"/></a><small><em>Tip:</em>You can choose to have the policy expire or stay current. Next we will actually add our policies.</small>
     </div>
     <div class="carousel-item">
-    Each statement follows this basic syntax: </br> <code>Allow group <group_name> to <verb> <resource-type> in compartment <compartment_name></code></br>Some cases you may want to apply to a tenancy, heres an example: <code>Allow group <group_name> to <verb> <resource-type> in tenancy</code> <small><em>Tip:</em> Policies only allow access, they cannot deny it. </small> </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/idstatements.png "/></a>
+    Each statement follows this basic syntax: </br> <code>Allow group <group_name> to <verb> <resource-type> in compartment <compartment_name></code></br>Some cases you may want to apply to a tenancy, here is an example: <code>Allow group <group_name> to <verb> <resource-type> in tenancy</code> <small><em>Tip:</em> Policies only allow access, they cannot deny it. </small> </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/idstatements.png "/></a>
     </div>
     <div class="carousel-item">
     For this tutorial add the common admin policy: <code>Allow group <group_name> to manage All Resources in compartment <compartment_name></code> </br>Replacing 'group_name' and 'compartment_name' with the previous created.</br><small><em>Tip:</em> Here are common policies you may encounter and use. <a href="https://docs.cloud.oracle.com/iaas/Content/Identity/Concepts/commonpolicies.htm">Click here.</a></small>
@@ -269,7 +269,7 @@ $("#create_vcn").on('click', function(){
     Under CIDR Block apply the proper contiguous IPv4 CIDR block for the VCN.</br></br>Oracle recommends using one of the private IP address ranges specified in RFC 1918 (10.0.0.0/8, 172.16/12, and 192.168/16). However, you can use a publicly routable range. Also, OCI has a range of /16 and /30 for the network. <small><em>Tip:</em> If you plan to peer this VCN with another VCN, the VCNs must not have overlapping CIDRs. Also network size <strong>cannot</strong> be changed after created.</small>
     </div>
     <div class="carousel-item">
-    Check 'Use DNS hostnames in his VCN'. </br>Leave DNS Label default and click \"Create Virtual Cloud Network\" button. </br><a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/vcncustom.png"/></a> <small><em>Tip:</em> The default resources created are route table, security list, and DHCP options. Other resources like Internet Gateway and Subnets must be created manually. </br> This offers more customizations such as creating a private only subnets. Refer to the other tutorials to create each resource.</small> <small><em>Tip2:</em> 'Use DNS hostnames' is rewuired if using Database PaaS services.</small>
+    Check 'Use DNS hostnames in his VCN'. </br>Leave DNS Label default and click \"Create Virtual Cloud Network\" button. </br><a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/vcncustom.png"/></a> <small><em>Tip:</em> The default resources created are route table, security list, and DHCP options. Other resources like Internet Gateway and Subnets must be created manually. </br> This offers more customizations such as creating a private only subnets. Refer to the other tutorials to create each resource.</small> <small><em>Tip2:</em> 'Use DNS hostnames' is required if using Database PaaS services.</small>
     </div>
     <div class="carousel-item">
     Your Virtual Cloud Network is provisioned! Use the other tutorials to create additional resources within the VCN. <small><em>Tip:</em> Keep in mind you can create more Route Tables and Security List than the default and apply them to different subnets.</small>
@@ -281,7 +281,7 @@ $("#create_vcn").on('click', function(){
 });
 
 $("#create_security_lists").on('click', function(){
-    $(".modal-title").html("Creating a VCNs");
+    $(".modal-title").html("Creating Security Lists");
     var pages = `
     <li data-target="#carouseltutorials" data-slide-to="0" class="active"></li>
     <li data-target="#carouseltutorials" data-slide-to="1"></li>
@@ -303,7 +303,7 @@ $("#create_security_lists").on('click', function(){
     Choose the VCN you wish to add security list to. Under Resources, Click Security Lists, then Create Security List. </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/vcnseclist.png"/></a> 
     </div>
     <div class="carousel-item">
-    Choose the compartment for the Security List and Apply a name. Here allows you to add all the Ingress and Egress rules for the security list. </br> <small><em>Tip:</em> Ingress rules are traffic incomming to your Oracle VCN, and Egress rules are managing traffic outgoing your VCNs. </br> For more information on Ingress vs Egress and Stateless vs Stateful go to <a href='https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/securitylists.htm?Highlight=egress' target='_blank'>here.</a></small>  
+    Choose the compartment for the Security List and Apply a name. Here allows you to add all the Ingress and Egress rules for the security list. </br> <small><em>Tip:</em> Ingress rules are traffic incoming to your Oracle VCN, and Egress rules are managing traffic outgoing your VCNs. </br> For more information on Ingress vs Egress and Stateless vs Stateful go to <a href='https://docs.cloud.oracle.com/iaas/Content/Network/Concepts/securitylists.htm?Highlight=egress' target='_blank'>here.</a></small>  
     </div>
     <div class="carousel-item">
     Create the Security List. Now, when you create a subnet you can choose the custom Security Lists in the drop down menu instead of the default.
@@ -350,7 +350,7 @@ $("#create_route_table").on('click', function(){
     Create the Route Table. Now, when you create a subnet you can choose the custom Route Table in the drop down menu instead of the default.
     </div>
     <div class="carousel-item">
-    For mor information about routing in OCI click <a href="https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingroutetables.htm" target='_blank'> here</a>
+    For more information about routing in OCI click <a href="https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/managingroutetables.htm" target='_blank'> here</a>
     </div>
     `;
     $(".carousel-indicators").html(pages);
@@ -370,7 +370,7 @@ $("#create_subnet").on('click', function(){
     `; 
     body = `
     <div class="carousel-item active">
-    Subnets are subdivisions of a VCN. </br> Just like VCNs, each subnet must be a continuous range. Subnets contain virtual network interface cards which attach to instances. Can be AD specific or regional and should not overlap with other subnets in the VCN. <small><em>Tip:</em> Subnets can be private or public. private subnets do not allow public IPs on vNICs in the subnet. Public subnets will allow public IP on the vNIC but can be optional.</small>
+    Subnets are subdivisions of a VCN. </br> Just like VCNs, each subnet must be a continuous range. Subnets contain virtual network interface cards which attach to instances. Can be AD specific or regional and should not overlap with other subnets in the VCN. <small><em>Tip:</em> Subnets can be private or public. Private subnets do not allow public IPs on vNICs in the subnet. Public subnets will allow public IP on the vNIC but can be optional.</small>
     </div>
     <div class="carousel-item">
     Click the menu button on top left. Scroll down to <strong>"Networking"</strong> and click <strong>"Virtual Cloud Networks"</strong>. </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/vcnmenu.png"/></a>
@@ -627,7 +627,7 @@ $("#create_blockvolume").on('click', function(){
     Click on the name of the instance you want to attach the block volume. Click Attached Block Volume, and click Attach Block Volume button. </br><a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/bvattach.png"/></a>
     </div>
     <div class="carousel-item">
-    Choose iSCSI or Paravirtualized. Choose a compartment. Under Block Volume choose the BV you just created. Choose the access type, read only or read & write. Then click create. <small><em>Tip:</em> For more infromation on Block Volumes, visit <a href='https://docs.cloud.oracle.com/iaas/Content/Block/Concepts/overview.htm?Highlight=block%20volumes'>here</a>.</small> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/bvattach2.png"/></a>
+    Choose iSCSI or Paravirtualized. Choose a compartment. Under Block Volume choose the BV you just created. Choose the access type, read only or read & write. Then click create. <small><em>Tip:</em> For more information on Block Volumes, visit <a href='https://docs.cloud.oracle.com/iaas/Content/Block/Concepts/overview.htm?Highlight=block%20volumes'>here</a>.</small> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/bvattach2.png"/></a>
     </div>
     <div class="carousel-item">
     Finally if you chose iSCSI mode to attach, you have to run the iSCSI commands within the instance you attached it to. Open the three dotted menu to copy the iSCSI commands. </br><a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/bviscsi.png"/></a>
@@ -668,13 +668,13 @@ $("#manage_blockvolume").on('click', function(){
     Give the backup a user friendly name. For backup type you can choose between full backup or incremental backups. </br> Click on <strong>"Create Block Volume Backup"</strong> to finish creating a backup. </br><a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/bvbackup2.png"/></a>
     </div>
     <div class="carousel-item">
-    You can also assign a policy for backups which will backup block volumes at different frequency and retention period. Monthly, Weekly, and Daily (Bronze, Silver, Gold). </br> Go back to <strong>"Block Volumes"</strong> and select the menu for the specific block volume. </br><small><em>Tip:</em> For more infromation on Policy Based Backups, visit <a href='https://docs.cloud.oracle.com/iaas/Content/Block/Tasks/schedulingvolumebackups.htm'>here</a>.</small> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/bvbackup3.png"/></a>
+    You can also assign a policy for backups which will backup block volumes at different frequency and retention period. Monthly, Weekly, and Daily (Bronze, Silver, Gold). </br> Go back to <strong>"Block Volumes"</strong> and select the menu for the specific block volume. </br><small><em>Tip:</em> For more information on Policy Based Backups, visit <a href='https://docs.cloud.oracle.com/iaas/Content/Block/Tasks/schedulingvolumebackups.htm'>here</a>.</small> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/bvbackup3.png"/></a>
     </div>
     <div class="carousel-item">
     Click on Assign Backup Policy. Here you can choose on the policy you want. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/bvbackup4.png"/></a>
     </div>
     <div class="carousel-item">
-    Finally you can also create clones for Block Volumes. </br><small><em>Tip:</em> For more infromation on Clone vs Backups go <a href='https://docs.cloud.oracle.com/iaas/Content/Block/Concepts/blockvolumebackups.htm#DifferencesBetweenBlockVolumeBackupsandClones'>here</a>.</small>
+    Finally you can also create clones for Block Volumes. </br><small><em>Tip:</em> For more information on Clone vs Backups go <a href='https://docs.cloud.oracle.com/iaas/Content/Block/Concepts/blockvolumebackups.htm#DifferencesBetweenBlockVolumeBackupsandClones'>here</a>.</small>
     </div>
     <div class="carousel-item">
     To clone a block volume click on the block volume you wish to clone. Choose Block Volume Clone then click on Create Clone. Enter the details you wish for the Clone Volume. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/bvbackup5.png"/></a> </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/bvbackup6.png"/></a>
@@ -703,7 +703,7 @@ $("#create_objstr").on('click', function(){
     `; 
     body = `
     <div class="carousel-item active">
-    Another type of storage for OCI is object storage which offers both "hot" (frequently accessed) storage, and "cold" (archive) storage. </br> Object storage is ideal for having a bucket of data. For this tutorial we will go through how to create object storage. <small><em>Tip:</em> A namespace is top level container for buckers and objects and must be unique. Buckets are a logical container that hold objects.</small>
+    Another type of storage for OCI is object storage which offers both "hot" (frequently accessed) storage, and "cold" (archive) storage. </br> Object storage is ideal for having a bucket of data. For this tutorial we will go through how to create object storage. <small><em>Tip:</em> A namespace is top level container for buckets and objects and must be unique. Buckets are a logical container that hold objects.</small>
     </div>
     <div class="carousel-item">
     Click the menu button on top left. Scroll down to <strong>"Object Storage"</strong> and click <strong>"Object Storage"</strong>. </br><a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/objmenu.png"/></a> <small><em>Tip:</em> Archive tier is mostly only for uploading objects.</br> Object Storage also has life cycle policies.</small>
@@ -725,6 +725,57 @@ $("#create_objstr").on('click', function(){
     </div>
     <div class="carousel-item">
     To download objects, click on the three dots on the object will have a menu. In the menu choose <strong>"Download"</strong> if you wish to re-download the file onto your local computer. </br><a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/objdownload.png"/></a>
+    </div>
+    `;
+    $(".carousel-indicators").html(pages);
+    $(".carousel-inner").html(body);
+    img_popup();
+});
+
+$("#create_preauth").on('click', function(){
+    $(".modal-title").html("Creating a Pre-Authenticated Request");
+    var pages = `
+    <li data-target="#carouseltutorials" data-slide-to="0" class="active"></li>
+    <li data-target="#carouseltutorials" data-slide-to="1"></li>
+    <li data-target="#carouseltutorials" data-slide-to="2"></li>
+    <li data-target="#carouseltutorials" data-slide-to="3"></li>
+    <li data-target="#carouseltutorials" data-slide-to="4"></li>
+    <li data-target="#carouseltutorials" data-slide-to="5"></li>
+    <li data-target="#carouseltutorials" data-slide-to="6"></li>
+    <li data-target="#carouseltutorials" data-slide-to="7"></li>
+    <li data-target="#carouseltutorials" data-slide-to="8"></li>
+    <li data-target="#carouseltutorials" data-slide-to="9"></li>
+    `; 
+    body = `
+    <div class="carousel-item active">
+    Object storage offers secure way to share buckets and objects. Pre-Authenticated Requests allow users to access Object Storage without own credentials or API keys. <small><em>Tip:</em> Bucket Pre-Authenticated requests can be used to create objects in the bucket. With this request, you cannot read from or list the objects in the bucket.</small>
+    </div>
+    <div class="carousel-item">
+    Click the menu button on top left. Scroll down to <strong>"Object Storage"</strong> and click <strong>"Object Storage"</strong>. </br><a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/objmenu.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Click on the menu for the bucket to create a Pre-Authenticated requests. This will give you the option to create a Pre-Auth for the bucket itself. </br> <small><em>Tip:</em>If you add a object name you can do a Pre-Authenticated request for a specific object.</small> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/objpreauth.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Click on the <strong>"Create Pre-Authenticated Requests"</strong> and Apply a name that will show in the Oracle Console. For Bucket requests, select the bucket as a target. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/objpreauth2.png"/></a> <small><em>Tip:</em> You can have Pre-Authenticated Requests to expire after a certain date.</small>
+    </div>
+    <div class="carousel-item">
+    A window will show displaying the Pre-Auth URI. Copy and save this for your records and use! </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/objpreauth3.png"/></a>
+    </div>
+    <div class="carousel-item">
+    To create secure access to a specific object in a bucket, you can also create Pre-Auth to specific object. </br> When viewing the Bucket information scroll to find your specific object under Objects menu. Click on the menu options for the object then click on Create Pre-Authenticated request. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/objpreauth4.png"/></a>
+    </div>
+    <div class="carousel-item">
+    The object name should be auto filled. You can give the Pre-Auth a friendly name. </br> For access type you can specify type from Read, Write, or both Read & Write. As well as expiration date. </br> Click on Create. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/objpreauth4.png"/></a>
+    </div>
+    <div class="carousel-item">
+    A window will show displaying the Pre-Auth URI. Copy and save this for your records and use as well. This link will allow users direct access to specific objects only. </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/objpreauth3.png"/></a>
+    </div>
+    <div class="carousel-item">
+    To view Pre-Authenticated Requests previously created. In the bucket information click on Pre-Authenticated requests. </br> Here you can manage the requests and view information. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/objpreauth5.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Congrats! Now you know how to create secure access to object storage buckets and objects. </br> Pre-Authenticated request will work while the user who created the requests has access or till the expiration date! </br> For more information on Pre-Authenticated request go to the <a href='https://docs.cloud.oracle.com/iaas/Content/Object/Tasks/usingpreauthenticatedrequests.htm' target='_blank'>documentation</a>
     </div>
     `;
     $(".carousel-indicators").html(pages);
@@ -765,10 +816,46 @@ $("#create_filestorage").on('click', function(){
     Next ssh into your instance you wish to mount the file system to. Example for Oracle Linux: <code>sudo yum install nfs-utils</br>sudo mkdir -p /mnt/TestFS</br>sudo mount 10.x.x.x:/TestFS /mnt/TestFS</code>
     </div>
     <div class="carousel-item">
-    Congrats! You can now use your your file system storage. To see if it worked just use the command <code> df -h </code> to list our all the Filesystem and Mount points.
+    Congrats! You can now use your file system storage. To see if it worked just use the command <code> df -h </code> to list our all the Filesystem and Mount points.
     </div>
     <div class="carousel-item">
     For more documentation on File Storage <a target='_blank' href='https://docs.cloud.oracle.com/iaas/Content/File/Concepts/filestorageoverview.htm'>click here.</a>
+    </div>
+    `;
+    $(".carousel-indicators").html(pages);
+    $(".carousel-inner").html(body);
+    img_popup();
+});
+
+// ===
+$("#create_adb").on('click', function(){
+    $(".modal-title").html("Creating Autonomous Database");
+    var pages = `
+    <li data-target="#carouseltutorials" data-slide-to="0" class="active"></li>
+    <li data-target="#carouseltutorials" data-slide-to="1"></li>
+    <li data-target="#carouseltutorials" data-slide-to="2"></li>
+    <li data-target="#carouseltutorials" data-slide-to="3"></li>
+    <li data-target="#carouseltutorials" data-slide-to="4"></li>
+    <li data-target="#carouseltutorials" data-slide-to="5"></li>
+    `; 
+    body = `
+    <div class="carousel-item active">
+    Oracle offers Autonomous Database which is an Oracle Database with build in automation to make managing a database easier. </br> In this tutorial we'll create an autonomous database. <small><em>Tip:</em> For more information on Autonomous Database read the <a href='https://docs.oracle.com/en/database/autonomous-database-cloud-services.html' target='_blank'>documentation</a></br> You can read on the differences of Autonomous Transaction Processing vs Data Warehouse. Both have similar autonomous features.</small>
+    </div>
+    <div class="carousel-item">
+    Click the menu button on top left. Scroll down to <strong>"Autonomous Database"</strong> and click on either <strong>"Autonomous Data Warehouse or Transaction Processing"</strong>. </br><a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/create_adb1.png"/></a> <small><em>Tip:</em> ADW is useful for analytic workloads and transaction more for application that requires higher read and writes.</small>
+    </div>
+    <div class="carousel-item">
+    Click on Create Autonomous Database. Here will ask for information to create one. Apply a name that will display on the Oracle Console.</br> Database name will be the name for the database itself.</br> Choose between Data Warehouse or Transaction Processing based on your requirements. </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/create_adb2.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Choose a deployment type, for this tutorial choose serverless. </br> Choose the OCPU and Storage count. You can always change these configurations after provisioning. <small><em>Tip:</em>With Serverless Oracle manages the underlying network and infrastructure. While, Dedicated will provision an Exadata and allow you to control the network configurations. Dedicated is ideal for private databases vs serverless would have secure public access.</br> You can use Access Control Lists for Serverless to allow certain CIDR blocks specific access.</small><a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/create_adb3.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Finally fill out the password for the ADMIN user. Passwords should be secure and follow security rules specified. </br> If your company has Oracle DB licenses use BYOL, otherwise use License Included. </br> Click on Create Autonomous Database <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/create_adb4.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Your Autonomous Database should be provisioning! Congrats you created an Autonomous Database. You can look at different ways to use ADB and it's features in the documentations <a href='https://docs.oracle.com/en/database/autonomous-database-cloud-services.html' target='_blank'>here</a> and <a href='https://docs.cloud.oracle.com/iaas/Content/Database/Concepts/adboverview.htm' target='_blank'>here</a>
     </div>
     `;
     $(".carousel-indicators").html(pages);
@@ -797,7 +884,7 @@ $("#create_nat_gateway").on('click', function(){
     You should have a VCN already created with a default route table and default security list. Created a public subnet, private subnet, and internet gateway. Refer to previous tutorials on how to create those resources. Should look like this diagram: </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/network_nat_gateway1.png"/></a>
     </div>
     <div class="carousel-item">
-    Provision two linux compute instances in the seperate subnets one in the private subnet and one in public subnet. </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/network_nat_gateway2.png"/></a>
+    Provision two linux compute instances in the separate subnets one in the private subnet and one in public subnet. </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/network_nat_gateway2.png"/></a>
     </div>
     <div class="carousel-item">
     Next we'll create a NAT gateway so your private compute instance can communicate with the internet. Click on the VCN name and under resources click on NAT gateway. Click on Create NAT gateway. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/network_nat_gateway3.png"/></a></br></br> Apply a name for the gateway and click create. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/network_nat_gateway4.png"/></a>
@@ -806,13 +893,60 @@ $("#create_nat_gateway").on('click', function(){
     You have to add the following route rule for you VCN to use the NAT gateway. Go to your route table and Add Route Rule. Add the following: <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/network_nat_gateway5.png"/></a>
     </div>
     <div class="carousel-item">
-    In order to test the instance has internet connection through NAT gateway you must SSH into the instance and test a network functionality. </br> You're going to ssh into the public instance then the private instance. <strong>You must have the private key on the public instance in order to ssh from public to private instance</strong> </br> Tranfer the private key to the public instance using scp. Using Linux/Mac: <code>scp [private_key] opc@[public_ip]:/home/opc/.ssh</code> </code> </br> Then SSH into your public instance using your public IP. Linux/Mac: <code>ssh -i [private ssh key path] opc@[public ip] </code>
+    In order to test the instance has internet connection through NAT gateway you must SSH into the instance and test a network functionality. </br> You're going to ssh into the public instance then the private instance. <strong>You must have the private key on the public instance in order to ssh from public to private instance</strong> </br> Transfer the private key to the public instance using scp. Using Linux/Mac: <code>scp [private_key] opc@[public_ip]:/home/opc/.ssh</code> </code> </br> Then SSH into your public instance using your public IP. Linux/Mac: <code>ssh -i [private ssh key path] opc@[public ip] </code>
     </div>
     <div class="carousel-item">
     Now SSH into your private instance using the private ssh key on the public instance. <code> ssh -i [private key] opc@[private_ip]</code> You should be in the private instance on the private subnet.
     </div>
     <div class="carousel-item">
     Lastly test the internet connection using ping google.com, traceroute, or an update on the machine such as 'sudo yum update' for Oracle Linux. </br> Congratulations, you created and used a NAT gateway.
+    </div>
+    `;
+    $(".carousel-indicators").html(pages);
+    $(".carousel-inner").html(body);
+    img_popup();
+});
+
+$("#creating_service_gateway").on('click', function(){
+    $(".modal-title").html("Walkthrough on creating a Service Gateway");
+    var pages = `
+    <li data-target="#carouseltutorials" data-slide-to="0" class="active"></li>
+    <li data-target="#carouseltutorials" data-slide-to="1"></li>
+    <li data-target="#carouseltutorials" data-slide-to="2"></li>
+    <li data-target="#carouseltutorials" data-slide-to="3"></li>
+    <li data-target="#carouseltutorials" data-slide-to="4"></li>
+    <li data-target="#carouseltutorials" data-slide-to="5"></li>
+    <li data-target="#carouseltutorials" data-slide-to="6"></li>
+    <li data-target="#carouseltutorials" data-slide-to="7"></li>
+    <li data-target="#carouseltutorials" data-slide-to="8"></li>
+    `; 
+    body = `
+    <div class="carousel-item active">
+    You can add a Service Gateway to your VCN. Service gateway gives cloud resources in a VCN private access to your Oracle Services without going over the public internet.</br></br>In this tutorial we'll showcase how to create a Service Gateway. <small><em>Tip:</em> Some Oracle Resources include Oracle Analytics Cloud, Oracle Autonomous Database, and Object Storage. Keep in mind the services should be in the same region as your VCN.</small>
+    </div>
+    <div class="carousel-item">
+    You should have a VCN already created with a default route table and default security list. Created subnets (public or private). Refer to previous tutorials on how to create those resources.
+    </div>
+    <div class="carousel-item">
+    Next we'll create a service gateway so your instances can communicate privately to oracle services. Click on the VCN name and under resources click on Service gateway. Click on <strong>"Create Service gateway"</strong> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/network_service_gateway1.png"/></a></br></br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/network_service_gateway2.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Apply a name for the gateway and choose the correct compartment (same as VCN usually). Under services select which Oracle Service needed. Each label will allow communication to specific Oracle CIDR blocks for Oracle Services. Click on Create. </br> <small><em>Tip:</em> A common usecase is to use Object Storage with private Database instances on OCI for Database backups. If only Object Storage is required choose Object Storage as a Service, otherwise it is recommended to use all services.</small> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/network_service_gateway3.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Once a Service Gateway is created it corresponds to a specific VCN. Next we have to update route tables and security lists to allow instances to access Oracle Services. </br> Click on Route Tables and select the route table for the specified subnet. We can use the default.</br> Click on <strong>"Add Route Rules"</strong> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/network_service_gateway4.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Add a new Route rule: </br> For target type select Service Gateway. Destination service should be the same as the previous step when creating the service gateway. Select your service gateway created before under the target gateway. </br> Add the new Route rule. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/network_service_gateway5.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Finally we'll edit the security lists to allow communication. Click on Security Lists and choose the security list. We'll use the default. Make sure to have Egress and Ingress rules open for the Oracle Services CIDR block. If an Egress rule allows 0.0.0.0/0 TCP/All then it should allow traffic thru the service gateway. </br>The following is an example of adding a rule specifically for service gateway. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/network_service_gateway6.png"/></a>
+    </div>
+    <div class="carousel-item">
+    You can also restrict service gateway access using IAM policies. You can allow specific resources in a VCN to access object storage or a specific CIDR block. More information <a href='https://docs.cloud.oracle.com/iaas/Content/Network/Tasks/servicegateway.htm' target='_blank'>here.</a>
+    </div>
+    <div class="carousel-item">
+    Congrats! You created a service gateway to allow instances in a VCN private access to public Oracle Services. </br> One way to test the connection you can create a database instance and have instantiate backup. The backup should store in object storage and will use service gateway to allow communication between the two.
     </div>
     `;
     $(".carousel-indicators").html(pages);
@@ -837,7 +971,7 @@ $("#creating_local_peering").on('click', function(){
     `; 
     body = `
     <div class="carousel-item active">
-    You can extend your VCN by connecting two VCNs in the same region together to communicate with Private IP addresses without routing traffic ovver the internet. Can be in the same or different Oracle Tenancy. <small><em>Tip:</em> To peer VCN require non-overlapping CIDRs in the same region. For peering within different regions you should use Regional Peering.</small>
+    You can extend your VCN by connecting two VCNs in the same region together to communicate with Private IP addresses without routing traffic over the internet. Can be in the same or different Oracle Tenancy. <small><em>Tip:</em> To peer VCN require non-overlapping CIDRs in the same region. For peering within different regions you should use Regional Peering.</small>
     </div>
     <div class="carousel-item">
     In the following tutorial we'll create the following architecture to peer two local VCNs. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/localpeerarch.png"/></a>
@@ -846,7 +980,7 @@ $("#creating_local_peering").on('click', function(){
     We'll create the first VCN. Create a VCN with the CIDR block of 192.168.0.0/16. </br>Keep the default <strong>Route Table</strong> and <strong>Security List.</strong> </br> Next create a <strong>Public Subnet</strong> with the CIDR 192.168.0.0/24. </br> Create an <strong>Internet Gateway</strong> and add the following route rule to the VCN (change the internet gateway target with yours) <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/vcnigcreation.png"/></a>
     </div>
     <div class="carousel-item">
-    In order for two local VCN to communicate with eachother we require a Local Peering Gateway. </br></br>Choose the VCN we just created, under resources click on Local Peering Gateways. </br> Click Create Local Peering Gateway and give it a friendly name. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/localpeerLPG.png"/></a>
+    In order for two local VCN to communicate with each other we require a Local Peering Gateway. </br></br>Choose the VCN we just created, under resources click on Local Peering Gateways. </br> Click Create Local Peering Gateway and give it a friendly name. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/localpeerLPG.png"/></a>
     </div>
     <div class="carousel-item">
     Next we'll create the second VCN. Choose VCN only, apply the following CIDR block: 10.0.0.0/16. Use the default <strong>Route Table</strong> and <strong>Security List.</strong>. </br> Create a <strong>Private Subnet</strong> with CIDR 10.0.0.0/24. Since we have a private subnet we won't create an internet gateway for this VCN.
