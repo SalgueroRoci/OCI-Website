@@ -855,7 +855,7 @@ $("#create_adb").on('click', function(){
     Finally fill out the password for the ADMIN user. Passwords should be secure and follow security rules specified. </br> If your company has Oracle DB licenses use BYOL, otherwise use License Included. </br> Click on Create Autonomous Database <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/create_adb4.png"/></a>
     </div>
     <div class="carousel-item">
-    Your Autonomous Database should be provisioning! Congrats you created an Autonomous Database. You can look at different ways to use ADB and it's features in the documentations <a href='https://docs.oracle.com/en/database/autonomous-database-cloud-services.html' target='_blank'>here</a> and <a href='https://docs.cloud.oracle.com/iaas/Content/Database/Concepts/adboverview.htm' target='_blank'>here</a>
+    Your Autonomous Database should be provisioning! Congrats you created an Autonomous Database. You can look at different ways to use ADB and it's features in the documentations <a href='https://docs.oracle.com/en/cloud/paas/autonomous-data-warehouse-cloud/user/part-using.html#GUID-F9B1D121-5D89-40B4-90C6-8E8E233C2B3F' target='_blank'>here</a> and <a href='https://docs.cloud.oracle.com/iaas/Content/Database/Concepts/adboverview.htm' target='_blank'>here</a>
     </div>
     `;
     $(".carousel-indicators").html(pages);
@@ -863,6 +863,48 @@ $("#create_adb").on('click', function(){
     img_popup();
 });
 
+$("#create_db").on('click', function(){
+    $(".modal-title").html("Creating an Oracle Database");
+    var pages = `
+    <li data-target="#carouseltutorials" data-slide-to="0" class="active"></li>
+    <li data-target="#carouseltutorials" data-slide-to="1"></li>
+    <li data-target="#carouseltutorials" data-slide-to="2"></li>
+    <li data-target="#carouseltutorials" data-slide-to="3"></li>
+    <li data-target="#carouseltutorials" data-slide-to="4"></li>
+    <li data-target="#carouseltutorials" data-slide-to="5"></li>
+    <li data-target="#carouseltutorials" data-slide-to="6"></li>
+    <li data-target="#carouseltutorials" data-slide-to="7"></li>
+    `; 
+    body = `
+    <div class="carousel-item active">
+    In this tutorial we'll show you how to create an Oracle Database on Oracle Cloud. The oracle database will have the same features as Oracle Database on premises with tools to make it easier to manage. </br> You don't need to do a fresh install when using database as a service. Also offers gives easy tool to backup and restore.<small><em>Note:</em> You need to have a VCN already created.</small>
+    </div>
+    <div class="carousel-item">
+    Click the menu button on top left. Scroll down to <strong>"Database"</strong> and click <strong>"Bare Metal, VM, and Exatadata"</strong>. </br> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/create_db1.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Click on <strong>"Create DB button"</strong> </br> Next you'll fill out information for the database. </br> Select the right compartment. Apply a name for your database that will be displayed on the console. <small><em>Note:</em> This is not the database name.</small> </br>  <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/create_db3.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Choose which Availability Domain to deploy. Next DBaaS offers different deployment options. </br> BareMetal deploys a standalone dedicated server. </br>Virtual Machine will deploy a database on a vm on shared server.</br> Exadata deploys database on Oracles engineered system optimized for Oracle DB. <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/create_db3.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Choose your shape for OCPU and RAM count. Select which database edition you require for your workload.</br> Next input the amount of storage needed. If you require fast provisioning for testing purposes select Logical Volume Manager. Otherwise choose Oracle Managed Storage. <small><em>Tip:</em> More information on fast provisioning <a href='https://docs.cloud.oracle.com/iaas/Content/Database/Concepts/overview.htm#fastprovisioning' target='_blank'>here</a></br></small> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/create_db4.png"/></a> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/create_db5.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Add your public key in order to SSH into your instance. To learn how to create an SSH key pair on <a target='_blank' href='https://docs.cloud.oracle.com/iaas/Content/GSG/Tasks/creatingkeys.htm'>Mac/Linux</a> or <a target='_blank' href='https://www.cloudinsidr.com/content/how-to-create-openssh-keys-on-a-windows-desktop-for-remote-access-to-a-linux-server/'> Windows</a>. </br> Choose the License type. Then choose the VCN and subnet to deploy it in. <small><em>Tips:</em> For Mac/Linux you can easily copy your keys using "pbcopy < ~/.ssh/id_rsa.pub" command. </small> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/create_db6.png"/></a><a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/create_db7.png"/></a>
+    </div>
+    <div class="carousel-item">
+    Finally input the name for your oracle database itself. Choose the Oracle database version you wish to use.</br> Then for 12c and older versions will create a pluggable database. Apply a name for your PDB. </br> Give a password for your ADMIN user and click create! <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/create_db8.png"/></a> <a class="img-modal" type="button" data-toggle="modal" data-target="#imagess"><img class="img-inner" src="images/tutorials/create_db9.png"/></a>
+    </div>
+    <div class="carousel-item">
+    After clicking create your database should be provisioning. Congrats! You created an oracle database. For more information refere to the <a href='https://docs.cloud.oracle.com/iaas/Content/Database/Concepts/overview.htm' target='_blank'>documentation.</a> <a href='https://docs.cloud.oracle.com/iaas/Content/Database/Concepts/exaoverview.htm' target='_blank'>Exadata documentation.</a>
+    </div>
+    `;
+    $(".carousel-indicators").html(pages);
+    $(".carousel-inner").html(body);
+    img_popup();
+});
 // ====
 $("#create_nat_gateway").on('click', function(){
     $(".modal-title").html("Creating a NAT Gateway");
