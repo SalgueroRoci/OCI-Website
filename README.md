@@ -3,11 +3,7 @@
 Websites that hosted OCI workshops for ExaCC and OCI workshops. 
 
 Websites:  
-http://tinyurl.com/ociWorkshop <-- Main Tutorials for [extension](https://chrome.google.com/webstore/detail/oci-workshop-extension/pjonegmmmclaihfglajojmfcpfambpcd) oci_workshop folder    
-
-http://tinyurl.com/exaccWorkshop    
-
-https://tinyurl.com/ociWorkshops    
+[website](https://objectstorage.us-ashburn-1.oraclecloud.com/n/orasenatdecanational01/b/ociworkshop/o/oci_workshop/extension.html) <-- Main Tutorials for [extension](https://chrome.google.com/webstore/detail/oci-workshop-extension/pjonegmmmclaihfglajojmfcpfambpcd) oci_workshop folder      
 
 
 # oci_workshop_scripts
